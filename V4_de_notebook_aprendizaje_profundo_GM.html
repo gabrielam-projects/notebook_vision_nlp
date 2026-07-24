@@ -236,7 +236,15 @@
     .header-desc {
       color: var(--text-muted);
       font-size: 14px;
-      max-width: 600px;
+      max-width: 100%;
+    }
+
+    .header-desc p {
+      margin: 0 0 10px;
+    }
+
+    .header-desc p:last-child {
+      margin-bottom: 0;
     }
 
     .header-meta {
@@ -458,6 +466,16 @@
       border-left-color: var(--accent2);
     }
 
+    .callout.activity {
+      background: rgba(236, 72, 153, .07);
+      border-left-color: rgb(236, 72, 153);
+    }
+
+    .callout.tip {
+      background: rgba(250, 204, 21, .08);
+      border-left-color: rgb(250, 204, 21);
+    }
+
     .callout p {
       margin-bottom: 0;
       font-size: 13.5px;
@@ -489,6 +507,14 @@
       color: var(--accent2);
     }
 
+    .callout-title.activity {
+      color: rgb(236, 72, 153);
+    }
+
+    .callout-title.tip {
+      color: rgb(250, 204, 21);
+    }
+
     .repro-note {
       background: rgba(52, 211, 153, .04);
       border: 1px dashed rgba(52, 211, 153, .3);
@@ -517,6 +543,153 @@
       margin-bottom: 3px;
     }
 
+    .doc-note {
+      background: rgba(14, 165, 233, .06);
+      border: 1px solid rgba(14, 165, 233, .28);
+      border-left: 4px solid rgb(14, 165, 233);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 10px 0;
+    }
+
+    .doc-note-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgb(56, 189, 248);
+      margin-bottom: 8px;
+    }
+
+    .doc-note ul {
+      margin-bottom: 0;
+    }
+
+    .doc-note li {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .eval-dashboard {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 14px;
+    }
+
+    .eval-card {
+      background: rgba(15, 23, 42, .72);
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .eval-card.bad {
+      border-color: rgba(239, 68, 68, .36);
+      background: rgba(239, 68, 68, .08);
+    }
+
+    .eval-card.warn {
+      border-color: rgba(249, 115, 22, .34);
+      background: rgba(249, 115, 22, .08);
+    }
+
+    .eval-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+
+    .eval-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      color: var(--text);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .eval-note {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    .confusion-wrap {
+      overflow-x: auto;
+      margin: 12px 0;
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: 8px;
+      background: rgba(15, 23, 42, .45);
+    }
+
+    .confusion-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 660px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .confusion-table th,
+    .confusion-table td {
+      border: 1px solid rgba(148, 163, 184, .14);
+      padding: 7px 6px;
+    }
+
+    .confusion-table th {
+      color: var(--text-muted);
+      background: rgba(30, 41, 59, .82);
+      font-weight: 600;
+    }
+
+    .confusion-table .axis {
+      color: var(--accent);
+      background: rgba(79, 156, 249, .1);
+      font-weight: 700;
+    }
+
+    .confusion-table .hot {
+      background: rgba(239, 68, 68, .34);
+      color: #fecaca;
+      font-weight: 700;
+    }
+
+    .confusion-table .mid {
+      background: rgba(249, 115, 22, .2);
+      color: #fed7aa;
+    }
+
+    .confusion-table .diag {
+      background: rgba(52, 211, 153, .18);
+      color: #bbf7d0;
+      font-weight: 700;
+    }
+
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .phase-card {
+      background: rgba(79, 156, 249, .06);
+      border: 1px solid rgba(79, 156, 249, .22);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .phase-card strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+
     .code-content {
       padding: 16px 20px;
       font-family: 'JetBrains Mono', monospace;
@@ -526,6 +699,14 @@
       overflow-x: auto;
       color: #cdd9e5;
       background: var(--code-bg);
+    }
+
+    .code-content pre {
+      margin: 0;
+      font: inherit;
+      line-height: inherit;
+      color: inherit;
+      white-space: inherit;
     }
 
     .kw {
@@ -791,6 +972,54 @@
       line-height: 1.6;
     }
 
+    .eda-decision-map {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .eda-decision-item {
+      background: rgba(15, 23, 42, .72);
+      border: 1px solid rgba(250, 204, 21, .28);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 148px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .eda-decision-kicker {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgb(250, 204, 21);
+      font-weight: 700;
+    }
+
+    .eda-decision-main {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .eda-decision-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .eda-decision-footer {
+      margin-top: 12px;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
     /* Compare table */
     .compare-table {
       width: 100%;
@@ -958,6 +1187,15 @@
       .tensor-grid {
         gap: 12px;
       }
+
+      .eda-decision-map {
+        grid-template-columns: 1fr;
+      }
+
+      .eval-dashboard,
+      .phase-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @keyframes fadeIn {
@@ -1010,10 +1248,11 @@
     <a href="#s3a" class="toc-item sub">MNIST: estructura</a>
     <a href="#s3b" class="toc-item sub">Estadisticas descriptivas</a>
     <a href="#s3c" class="toc-item sub">Visualizaciones</a>
-    <a href="#s3" class="toc-item sub">Densidad espacial</a>
-    <a href="#s3" class="toc-item sub">Correlacion entre clases</a>
-    <a href="#s3" class="toc-item sub">Ejemplos atipicos</a>
-    <a href="#s3" class="toc-item sub">5 aprendizajes del EDA</a>
+    <a href="#s3e" class="toc-item sub">Densidad espacial</a>
+    <a href="#s3f" class="toc-item sub">Correlacion entre clases</a>
+    <a href="#s3g" class="toc-item sub">Ejemplos atipicos</a>
+    <a href="#s3h" class="toc-item sub">5 aprendizajes del EDA</a>
+    <a href="#s3i" class="toc-item sub">Checklist replicable</a>
     <div class="toc-divider"></div>
     <a href="#s4" class="toc-item">4. Modelos preentrenados</a>
     <a href="#s4cat" class="toc-item sub">Catalogo de modelos</a>
@@ -1049,14 +1288,15 @@
       <div class="header-cell" id="s0">
         <div class="header-badge">Notebook · Módulo 3</div>
         <div class="header-h1">Visión Computacional y NLP en<br><span>Aprendizaje Profundo</span></div>
-        <div class="header-desc">Flujo documentado completo: tensores, entornos interactivos, exploración y procesamiento de datos, modelos preentrenados diferenciados por tipo de dato, y reproducibilidad de experimentos.</div>
+        <div class="header-desc">
+          <p>Guía práctica para revisar y replicar el flujo completo de Aprendizaje Profundo: selección de entorno, recolección y análisis de datos, preparación del dataset, diseño de arquitecturas, uso de modelos preentrenados, evaluación, reproducibilidad y despliegue. Cada bloque usa ejemplos base que pueden ser adaptados al proceso de un problema, dataset e intereses propios.</p>
+        </div>
         <div class="header-meta">
           <div class="meta-item">
-            <div class="meta-dot" style="background:var(--accent)"></div>TensorFlow: MobileNetV2 · PyTorch: ResNet18 ·
-            HuggingFace Transformers: DistilBERT
+            <div class="meta-dot" style="background:var(--accent)"></div>Visón · NLP · Tensor Flow · PyTorch
           </div>
           <div class="meta-item">
-            <div class="meta-dot" style="background:var(--accent2)"></div>MNIST · CIFAR-10 · ImageNet
+            <div class="meta-dot" style="background:var(--accent2)"></div>Transfer Learning · Hugging Face · TensorFlow Hub
           </div>
         </div>
       </div>
@@ -1078,6 +1318,8 @@
             texto explicativo y visualizaciones en un mismo documento, acelerando el ciclo de experimentacion sin
             sacrificar trazabilidad. Esta combinación es especialmente valiosa durante el prototipado inicial, donde se
             toman muchas decisiones que deben quedar registradas.</p>
+
+            <p>Documentar el flujo es clave dentro del ciclo de vida iterativo de un proyecto de aprendizaje profundo: permite comparar decisiones, justificar cambios, reproducir resultados y comunicar hallazgos conforme evolucionan los datos, los modelos y las métricas. El notebook combina código y documentación relevante para discutir qué debe considerarse en cada etapa antes de avanzar a la siguiente iteración.</p>
           <h3>Comparativa: Jupyter Notebook vs Google Colab</h3>
         </div>
       </div>
@@ -1133,6 +1375,19 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="cell-gutter">
+          <div class="cell-type">md</div>
+          <div class="run-btn">&#9654;</div>
+        </div>
+        <div class="cell-body md-cell">
+          <h3>Paso 1: instalación y comprobación de librerías</h3>
+          <p>Antes de recolectar o procesar datos, el primer paso técnico es confirmar que el entorno ejecuta las librerías
+            necesarias y que el hardware disponible coincide con lo que se usará durante la práctica. Esta comprobación
+            evita errores posteriores al entrenar modelos, mover tensores a GPU o cargar modelos preentrenados.</p>
         </div>
       </div>
 
@@ -1425,14 +1680,14 @@ a = [1. 2. 3.]
 b = [4. 5. 6.]
 ----
 a + b = [5. 7. 9.]
-a * b = [ 4. 10. 18.]
+a * b = [4. 10. 18.]
 reduce_mean(a) = 2.0
 reshape(a, (3,1)) shape = (3, 1)
 </div>
         </div>
       </div>
 
-      <div class="cell" id="s3a">
+      <div class="cell" id="s2c">
         <div class="cell-gutter">
           <div class="cell-type">md</div>
           <div class="run-btn">&#9654;</div>
@@ -1444,7 +1699,7 @@ reshape(a, (3,1)) shape = (3, 1)
       </div>
 
 
-      <div class="cell" id="s3b">
+      <div class="cell" id="s2d">
         <div class="cell-gutter">
           <div class="cell-type">code</div>
           <div class="run-btn">&#9654;</div>
@@ -1510,11 +1765,15 @@ La GPU es 346.34 veces más rápida que la CPU para esta operación.
         </div>
         <div class="cell-body md-cell">
           <div class="callout">
-            <div class="callout-title blue">Por qué importa el rango del tensor en la práctica</div>
-            <p>Cada capa de una red neuronal espera tensores con una forma específica. Si la forma no coincide con lo
-              que la capa espera, el modelo genera un error en tiempo de ejecucion. Entender el rango y la forma permite
-              depurar arquitecturas, interpretar que representan los datos en cada etapa del pipeline y diseñar
-              correctamente el preprocesamiento de entrada.</p>
+            <div class="callout-title blue">Por qué importa entender los tensores en la práctica</div>
+            <p>Un tensor es la forma en que una red neuronal recibe y transforma los datos. En visión computacional, una
+              imagen no entra al modelo como una fotografía, sino como una matriz de números; un conjunto de imágenes entra
+              como un tensor de mayor rango. Por eso es importante reconocer la forma de los datos: cantidad de imágenes,
+              alto, ancho y canales. Si una capa espera una entrada con cierta forma y recibe otra, el modelo no puede
+              continuar.</p>
+            <br>
+            <p>También importa usar la librería y el hardware adecuados. En Aprendizaje Profundo se repiten millones de
+              operaciones sobre tensores grandes, como multiplicaciones de matrices a muchos pixeles e imágenes por lote. La comparación anterior muestra la idea central: una CPU puede resolver la operación, pero una GPU está diseñada para ejecutar muchas operaciones numéricas en paralelo. Por eso, TensorFlow o PyTorch con soporte de GPU permiten entrenar y probar modelos mucho más rápido cuando el volumen de datos crece.</p>
           </div>
         </div>
       </div>
@@ -1536,9 +1795,12 @@ La GPU es 346.34 veces más rápida que la CPU para esta operación.
             grises de 28x28 píxeles de dígitos escritos a mano del 0 al 9, divididas en 60,000 para entrenamiento y
             10,000 para prueba. Es el punto de partida ideal para el análisis exploratorio de datos de imagen porque su
             estructura es clara y esta perfectamente balanceado.</p>
-          <p>A diferencia de datasets tabulares como Iris, MNIST esta compuesto por tensores de rango 3, conectando
-            directamente el concepto anterior con datos de imagen reales. Cada muestra es un tensor de shape
-            <code>(28, 28)</code> con valores enteros entre 0 y 255 que representan intensidad de pixel.</p>
+          <h3>De tensores abstractos a datos reales</h3>
+          <p>La sección anterior explicó que un tensor organiza datos por dimensiones. Ahora usamos esa idea con un dataset
+            real: al cargar MNIST obtenemos arreglos con miles de imágenes y etiquetas; después los convertimos a tensores
+            para que TensorFlow pueda operar sobre ellos durante el entrenamiento. En visión computacional, revisar el
+            <code>shape</code> permite confirmar cuántas imágenes hay, cuál es su resolución y cuántos canales tiene cada
+            muestra.</p>
         </div>
       </div>
 
@@ -1561,27 +1823,57 @@ sns.set(style=<span class="str">"whitegrid"</span>)
 <span class="cm"># Cargar MNIST; la primera vez se descarga automaticamente (~11 MB)</span>
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-<span class="fn">print</span>(<span class="str">"Estructura del dataset MNIST:"</span>)
-<span class="fn">print</span>(<span class="str">f" x_train : shape={x_train.shape},
-  dtype={x_train.dtype}"</span>)
-<span class="fn">print</span>(<span class="str">f" → {x_train.shape[0]:,} imágenes de
-  {x_train.shape[1]}x{x_train.shape[2]} píxeles"</span>)
-<span class="fn">print</span>(<span class="str">f" x_test : shape={x_test.shape}"</span>)
-<span class="fn">print</span>(<span class="str">f" y_train : shape={y_train.shape}, valores
-  unicos={np.unique(y_train).tolist()}"</span>)
-<span class="fn">print</span>(<span class="str">f" Rango de valores de pixel : {x_train.min()} –
-  {x_train.max()}"</span>)
-<span class="fn">print</span>(<span class="str">f" Rango del tensor de imagen: {x_train.ndim}"</span>)
+<span class="cm"># Convertir los arreglos NumPy a tensores y normalizar pixeles a [0, 1]</span>
+x_train_tensor = tf.convert_to_tensor(x_train, dtype=tf.float32) / <span class="num">255.0</span>
+x_test_tensor = tf.convert_to_tensor(x_test, dtype=tf.float32) / <span class="num">255.0</span>
+y_train_tensor = tf.convert_to_tensor(y_train, dtype=tf.int64)
+y_test_tensor = tf.convert_to_tensor(y_test, dtype=tf.int64)
+
+<span class="cm"># Agregar la dimension de canal: MNIST es escala de grises, por eso C = 1</span>
+x_train_tensor = tf.expand_dims(x_train_tensor, axis=-<span class="num">1</span>)
+x_test_tensor = tf.expand_dims(x_test_tensor, axis=-<span class="num">1</span>)
+
+<span class="fn">print</span>(<span class="str">"Carga de datos MNIST:"</span>)
+<span class="fn">print</span>(<span class="str">f" x_train original : shape={x_train.shape}, dtype={x_train.dtype}"</span>)
+<span class="fn">print</span>(<span class="str">f" x_test original  : shape={x_test.shape}, dtype={x_test.dtype}"</span>)
+<span class="fn">print</span>(<span class="str">f" y_train original : shape={y_train.shape}, valores unicos={np.unique(y_train).tolist()}"</span>)
+
+<span class="fn">print</span>(<span class="str">"\nConversion a tensores para Deep Learning:"</span>)
+<span class="fn">print</span>(<span class="str">f" x_train_tensor : shape={x_train_tensor.shape}, dtype={x_train_tensor.dtype.name}"</span>)
+<span class="fn">print</span>(<span class="str">f" x_test_tensor  : shape={x_test_tensor.shape}, dtype={x_test_tensor.dtype.name}"</span>)
+<span class="fn">print</span>(<span class="str">f" y_train_tensor : shape={y_train_tensor.shape}, dtype={y_train_tensor.dtype.name}"</span>)
+<span class="fn">print</span>(<span class="str">f" Rango tensor imagenes: {x_train_tensor.ndim}"</span>)
+<span class="fn">print</span>(<span class="str">f" Rango valores pixel normalizados: {tf.reduce_min(x_train_tensor).numpy():.1f} - {tf.reduce_max(x_train_tensor).numpy():.1f}"</span>)
+<span class="fn">print</span>(<span class="str">"\nInterpretacion: (numero_imagenes, alto, ancho, canales)"</span>)
 </div>
           <div class="output">
-<div class="output-label">salida</div>Estructura del dataset MNIST:
-x_train : shape=(60000, 28, 28), dtype=uint8
-→ 60,000 imágenes de 28x28 píxeles
-x_test : shape=(10000, 28, 28)
-y_train : shape=(60000,), valores unicos=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-Rango de valores de pixel : 0 – 255
-Rango del tensor de imagen: 3
+<div class="output-label">salida</div>Carga de datos MNIST:
+x_train original : shape=(60000, 28, 28), dtype=uint8
+x_test original  : shape=(10000, 28, 28), dtype=uint8
+y_train original : shape=(60000,), valores unicos=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Conversion a tensores para Deep Learning:
+x_train_tensor : shape=(60000, 28, 28, 1), dtype=float32
+x_test_tensor  : shape=(10000, 28, 28, 1), dtype=float32
+y_train_tensor : shape=(60000,), dtype=int64
+Rango tensor imagenes: 4
+Rango valores pixel normalizados: 0.0 - 1.0
+
+Interpretacion: (numero_imagenes, alto, ancho, canales)
 </div>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="cell-gutter">
+          <div class="cell-type">md</div>
+          <div class="run-btn">&#9654;</div>
+        </div>
+        <div class="cell-body md-cell">
+          <div class="callout activity">
+            <div class="callout-title activity">Actividad guiada: reporta los tensores de tu dataset</div>
+            <p>Carga tu dataset, muestra su conversión a tensores y explica el <code>shape</code> resultante. La información ideal a obtener debe incluir: número de muestras, alto, ancho, canales, tipo de dato, rango de valores de pixel, forma de las etiquetas y una interpretación breve de qué representa cada dimensión.</p>
+          </div>
         </div>
       </div>
 
@@ -1649,17 +1941,19 @@ Dataset prácticamente balanceado — no requiere sobremuestreo.
           <p>Para datos de imagen las técnicas de visualización difieren de las usadas con datos tabulares. En lugar de
             histogramas de variables o scatter plots entre atributos, se inspecciona directamente la distribución de
             intensidad de pixel, la imagen promedio por clase y la varianza intra-clase.</p>
-          <div class="callout purple">
-            <div class="callout-title purple">Preguntas clave en el EDA de datos de imagen</div>
-            <p>¿Cuál es el rango de valores de pixel y necesito normalizar? ¿Las clases son visualmente diferenciadas o
-              hay solapamiento? ¿Cuál es la varianza intra-clase, es decir, que tan distintas son dos muestras del mismo
-              dígito? ¿Las imágenes promedio muestran patrones nítidos que el modelo podrá aprender?</p>
+          <div class="callout tip">
+            <div class="callout-title tip">Hints: qué debes cubrir en esta etapa</div>
+            <p>Usa estas visualizaciones para obtener la información mínima que debe quedar documentada antes de entrenar:
+              rango de valores de pixel y decisión de normalización; balance visual entre clases; diferencias entre
+              muestras de una misma clase; patrones promedio que el modelo podría aprender; y posibles clases que se
+              parecen demasiado entre sí. Estos puntos ayudan a justificar el preprocesamiento y anticipar errores del
+              modelo.</p>
           </div>
         </div>
       </div>
 
 
-      <div class="cell" id="s4b">
+      <div class="cell" id="s3c_samples">
         <div class="cell-gutter">
           <div class="cell-type">code</div>
           <div class="run-btn">&#9654;</div>
@@ -1721,7 +2015,7 @@ Digito 9:  3198.9 [baja]
       </div>
 
 
-    <div class="cell" id="s5b">
+    <div class="cell" id="s3d">
       <div class="cell-gutter">
         <div class="cell-type">code</div>
         <div class="run-btn">&#9654;</div>
@@ -1733,8 +2027,8 @@ Digito 9:  3198.9 [baja]
 fig, axes = plt.subplots(<span class="num">2</span>, <span class="num">5</span>, figsize=(<span class="num">14</span>, <span class="num">5</span>))
 
 <span class="kw">for</span> digit, ax <span class="kw">in</span> zip(range(<span class="num">10</span>), axes.flatten()):
-    píxeles = (x_train[y_train == digit].astype(np.float32) / <span class="num">255.0</span>).flatten()
-    ax.hist(píxeles[píxeles &gt; <span class="num">0.05</span>], bins=<span class="num">30</span>, color=<span class="str">"#4C78A8"</span>, alpha=<span class="num">0.85</span>)
+    pixeles = (x_train[y_train == digit].astype(np.float32) / <span class="num">255.0</span>).flatten()
+    ax.hist(pixeles[pixeles &gt; <span class="num">0.05</span>], bins=<span class="num">30</span>, color=<span class="str">"#4C78A8"</span>, alpha=<span class="num">0.85</span>)
     ax.set_title(<span class="str">f"Digito {digit}"</span>, fontsize=<span class="num">9</span>)
     ax.set_xlabel(<span class="str">"Intensidad"</span>, fontsize=<span class="num">8</span>)
     ax.set_ylabel(<span class="str">"Frecuencia"</span>, fontsize=<span class="num">8</span>)
@@ -1754,7 +2048,7 @@ variables (5, 8) presentan distribuciones más dispersas.
     </div>
 
 
-    <div class="cell" id="s6b">
+    <div class="cell" id="s3e">
       <div class="cell-gutter">
         <div class="cell-type">code</div>
         <div class="run-btn">&#9654;</div>
@@ -1815,122 +2109,53 @@ Digito 9: 201 px ########################################
         <div class="cell-body md-cell">
           <h3>Análisis avanzado: densidad espacial, correlación entre clases y ejemplos atípicos</h3>
           <p>Las estadísticas básicas responden cuántos datos hay y cómo estan distribuidos. Estos tres análisis
-            complementarios responden algo máss útil para el diseño del modelo: <em>dónde</em> se concentran los trazos,
+            complementarios responden algo más útil para el diseño del modelo: <em>dónde</em> se concentran los trazos,
             <em>qué clases se parecen entre sí</em>, y <em>cuáles muestras son difíciles de clasificar</em>. Sus
             hallazgos deben registrarse antes de decidir la arquitectura.</p>
         </div>
       </div>
 
-      <div class="cell">
+      <div class="cell" id="s3f">
         <div class="cell-gutter">
           <div class="cell-type">code</div>
           <div class="run-btn">&#9654;</div>
           <div class="cell-num">[6]</div>
         </div>
         <div class="cell-body">
-          <div class="code-content"><span class="cm"># CELDA — Mapa de densidad espacial: dónde se concentran los trazos
-  por clase
-  # Revela si los dígitos usan zonas específicas del canvas de 28x28.</span>
-
-fig, axes = plt.subplots(<span class="num">2</span>, <span class="num">5</span>, figsize=(<span
-  class="num">14</span>, <span class="num">6</span>))
-fig.suptitle(<span class="str">"Figura: Mapa de probabilidad empírica por píxel condicionado a la clase. Los
-  digitos 0 y 8 muestran anillos activos en la periferia."</span>, fontsize=<span class="num">11</span>)
-
-<span class="kw">for</span> digit, ax <span class="kw">in</span> zip(<span class="fn">range</span>(<span
-  class="num">10</span>), axes.flatten()):
-clase = x_train[y_train == digit].astype(np.float32) / <span class="num">255.0</span>
-densidad = (clase > <span class="num">0.3</span>).mean(axis=<span class="num">0</span>) <span class="cm">#
-  fracción de muestras con pixel activo</span>
-im = ax.imshow(densidad, cmap=<span class="str">"inferno"</span>, vmin=<span class="num">0</span>,
-vmax=<span class="num">0.6</span>)
-ax.set_title(<span class="str">f"Digito {digit}"</span>, fontsize=<span class="num">9</span>)
-ax.axis(<span class="str">"off"</span>)
-
-plt.colorbar(im, ax=axes, orientation=<span class="str">"vertical"</span>, fraction=<span
-  class="num">0.02</span>,
-label=<span class="str">"Fracción de muestras con pixel activo"</span>)
-plt.tight_layout()
-plt.show()
-
-<span class="fn">print</span>(<span class="str">"Área activa media por clase (pixels con frecuencia >
-  20%):"</span>)
-<span class="kw">for</span> digit <span class="kw">in</span> <span class="fn">range</span>(<span
-  class="num">10</span>):
-clase = x_train[y_train == digit].astype(np.float32) / <span class="num">255.0</span>
-densidad = (clase > <span class="num">0.3</span>).mean(axis=<span class="num">0</span>)
-área = (densidad > <span class="num">0.2</span>).sum()
-barra = <span class="str">"#"</span> * (area // <span class="num">5</span>)
-<span class="fn">print</span>(<span class="str">f" Digito {digit}: {area:3d} px {barra}"</span>)
-</div>
-          <div class="output">
-<div class="output-label">salida</div>Figura: Mapa de probabilidad empírica por píxel condicionado a la
-clase. Los digitos 0 y 8 muestran anillos activos en la periferia.
-
-Área activa media por clase (pixels con frecuencia > 20%):
-Digito 0: 143 px ############################
-Digito 1: 52 px ##########
-Digito 2: 138 px ###########################
-Digito 3: 135 px ##########################
-Digito 4: 121 px ########################
-Digito 5: 129 px #########################
-Digito 6: 136 px ###########################
-Digito 7: 89 px #################
-Digito 8: 157 px ###############################
-Digito 9: 128 px #########################
-</div>
-        </div>
-      </div>
-
-      <div class="cell">
-        <div class="cell-gutter">
-          <div class="cell-type">code</div>
-          <div class="run-btn">&#9654;</div>
-          <div class="cell-num">[7]</div>
-        </div>
-        <div class="cell-body">
           <div class="code-content"><span class="cm"># CELDA — Correlación entre imágenes promedio de clases
-  # Alta correlación entre dos clases indica que son visualmente similares
-  # y por lo tanto difíciles de separar para un clasificador.</span>
+# Alta correlación entre dos clases indica que son visualmente similares
+# y por lo tanto difíciles de separar para un clasificador.</span>
 
 medias = np.array([
-x_train[y_train == d].astype(np.float32).mean(axis=<span class="num">0</span>).flatten() / <span
-  class="num">255.0</span>
-<span class="kw">for</span> d <span class="kw">in</span> <span class="fn">range</span>(<span
-  class="num">10</span>)
+    x_train[y_train == d].astype(np.float32).mean(axis=<span class="num">0</span>).flatten() / <span class="num">255.0</span>
+    <span class="kw">for</span> d <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)
 ])
 corr = np.corrcoef(medias)
 
 fig, ax = plt.subplots(figsize=(<span class="num">7</span>, <span class="num">6</span>))
-im = ax.imshow(corr, cmap=<span class="str">"RdYlGn"</span>, vmin=<span class="num">0.6</span>, vmax=<span
-  class="num">1.0</span>)
-ax.set_xticks(<span class="fn">range</span>(<span class="num">10</span>)); ax.set_yticks(<span
-  class="fn">range</span>(<span class="num">10</span>))
-ax.set_xticklabels([<span class="str">f"D{i}"</span> <span class="kw">for</span> i <span
-  class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)])
-ax.set_yticklabels([<span class="str">f"D{i}"</span> <span class="kw">for</span> i <span
-  class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)])
-<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span
-  class="num">10</span>):
-<span class="kw">for</span> j <span class="kw">in</span> <span class="fn">range</span>(<span
-  class="num">10</span>):
-ax.text(j, i, <span class="str">f"{corr[i,j]:.2f}"</span>, ha=<span class="str">"center"</span>, va=<span
-  class="str">"center"</span>, fontsize=<span class="num">7</span>)
-plt.colorbar(im, ax=ax, label=<span class="str">"Correlacion de Pearson"</span>)
-ax.set_title(<span class="str">"Correlación entre imágenes promedio de clases MNIST"</span>, fontsize=<span
-  class="num">11</span>)
-plt.tight_layout(); plt.show()
+im = ax.imshow(corr, cmap=<span class="str">"RdYlGn"</span>, vmin=<span class="num">0.6</span>, vmax=<span class="num">1.0</span>)
+ax.set_xticks(<span class="fn">range</span>(<span class="num">10</span>))
+ax.set_yticks(<span class="fn">range</span>(<span class="num">10</span>))
+ax.set_xticklabels([<span class="str">f"D{i}"</span> <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)])
+ax.set_yticklabels([<span class="str">f"D{i}"</span> <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)])
 
-<span class="fn">print</span>(<span class="str">"Pares con mayor correlacion (más dificiles de
-  separar):"</span>)
-pares = [(corr[i,j], i, j) <span class="kw">for</span> i <span class="kw">in</span> <span
-  class="fn">range</span>(<span class="num">10</span>) <span class="kw">for</span> j <span
-  class="kw">in</span> <span class="fn">range</span>(i+<span class="num">1</span>,<span
-  class="num">10</span>)]
-<span class="kw">for</span> r, i, j <span class="kw">in</span> sorted(pares, reverse=<span
-  class="kw">True</span>)[:<span class="num">5</span>]:
-<span class="fn">print</span>(<span class="str">f" Digito {i} — Digito {j} : r = {r:.4f}"</span>)
-</div>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>):
+    <span class="kw">for</span> j <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>):
+        ax.text(j, i, <span class="str">f"{corr[i, j]:.2f}"</span>, ha=<span class="str">"center"</span>, va=<span class="str">"center"</span>, fontsize=<span class="num">7</span>)
+
+plt.colorbar(im, ax=ax, label=<span class="str">"Correlacion de Pearson"</span>)
+ax.set_title(<span class="str">"Correlación entre imágenes promedio de clases MNIST"</span>, fontsize=<span class="num">11</span>)
+plt.tight_layout()
+plt.show()
+
+<span class="fn">print</span>(<span class="str">"Pares con mayor correlacion (más dificiles de separar):"</span>)
+pares = [
+    (corr[i, j], i, j)
+    <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)
+    <span class="kw">for</span> j <span class="kw">in</span> <span class="fn">range</span>(i + <span class="num">1</span>, <span class="num">10</span>)
+]
+<span class="kw">for</span> r, i, j <span class="kw">in</span> <span class="fn">sorted</span>(pares, reverse=<span class="kw">True</span>)[:<span class="num">5</span>]:
+    <span class="fn">print</span>(<span class="str">f" Digito {i} — Digito {j} : r = {r:.4f}"</span>)</div>
           <div class="output">
 <div class="output-label">salida</div>Pares con mayor correlacion (más dificiles de separar):
   Digito 4 — Digito 9 : r = 0.8979
@@ -1944,50 +2169,93 @@ pares = [(corr[i,j], i, j) <span class="kw">for</span> i <span class="kw">in</sp
 
       <div class="cell">
         <div class="cell-gutter">
+          <div class="cell-type">out</div>
+        </div>
+        <div class="cell-body diagram-cell">
+          <div style="font-size:13px;color:var(--text);font-weight:700;margin-bottom:6px;text-align:left;width:100%;">
+            EDA visual: de inspeccionar datos a tomar decisiones de modelado</div>
+          <div style="font-size:12.5px;color:var(--text-muted);line-height:1.65;text-align:left;width:100%;">
+            Antes de entrenar, cada visualización debe responder una pregunta práctica. Si el EDA no cambia ninguna
+            decisión del flujo, entonces falta conectar el hallazgo con el preprocesamiento, la arquitectura o la
+            evaluación.</div>
+          <div class="eda-decision-map">
+            <div class="eda-decision-item">
+              <div class="eda-decision-kicker">Carga y shape</div>
+              <div class="eda-decision-main">¿Qué entra al modelo?</div>
+              <div class="eda-decision-note">Confirma número de muestras, resolución, canales y etiquetas. Define si se
+                requiere resize, conversión RGB o cambio de formato.</div>
+            </div>
+            <div class="eda-decision-item">
+              <div class="eda-decision-kicker">Rango de pixel</div>
+              <div class="eda-decision-main">¿Cómo escalar los datos?</div>
+              <div class="eda-decision-note">Determina si basta normalizar a 0-1 o si conviene estandarizar con media y
+                desviación. Esto afecta la estabilidad del entrenamiento.</div>
+            </div>
+            <div class="eda-decision-item">
+              <div class="eda-decision-kicker">Balance visual</div>
+              <div class="eda-decision-main">¿Hay clases subrepresentadas?</div>
+              <div class="eda-decision-note">Permite decidir si se necesitan pesos por clase, más datos, sobremuestreo o
+                aumentos selectivos para clases con pocos ejemplos.</div>
+            </div>
+            <div class="eda-decision-item">
+              <div class="eda-decision-kicker">Similitud entre clases</div>
+              <div class="eda-decision-main">¿Qué errores esperar?</div>
+              <div class="eda-decision-note">Anticipa confusiones como 4-9, 5-8 o 7-9. Después se contrasta con la matriz
+                de confusión del modelo.</div>
+            </div>
+            <div class="eda-decision-item">
+              <div class="eda-decision-kicker">Atípicos y ruido</div>
+              <div class="eda-decision-main">¿Qué muestras revisar?</div>
+              <div class="eda-decision-note">Identifica trazos débiles, ejemplos ambiguos y posibles etiquetas incorrectas
+                antes de culpar a la arquitectura.</div>
+            </div>
+          </div>
+          <div class="eda-decision-footer">
+            En tu dataset propio, usa este mapa como checklist: cada hallazgo del EDA debe terminar en una decisión
+            concreta sobre datos, modelo o evaluación.
+          </div>
+        </div>
+      </div>
+
+      <div class="cell" id="s3g">
+        <div class="cell-gutter">
           <div class="cell-type">code</div>
           <div class="run-btn">&#9654;</div>
-          <div class="cell-num">[8]</div>
+          <div class="cell-num">[7]</div>
         </div>
         <div class="cell-body">
           <div class="code-content"><span class="cm"># CELDA — Ejemplos típicos, atípicos y de trazo débil por clase
-  # Identificarlos antes del entrenamiento ayuda a entender que tipo de
-  # muestras generaran errores de clasificación.</span>
+# Identificarlos antes del entrenamiento ayuda a entender qué tipo de
+# muestras pueden generar errores de clasificación.</span>
 
-fig, axes = plt.subplots(<span class="num">3</span>, <span class="num">10</span>, figsize=(<span
-  class="num">16</span>, <span class="num">5</span>))
-fig.suptitle(<span class="str">"Por clase: ejemplo tipico | más atipico | trazo más debil"</span>,
-fontsize=<span class="num">10</span>)
+fig, axes = plt.subplots(<span class="num">3</span>, <span class="num">10</span>, figsize=(<span class="num">16</span>, <span class="num">5</span>))
+fig.suptitle(<span class="str">"Por clase: ejemplo tipico | más atipico | trazo más debil"</span>, fontsize=<span class="num">10</span>)
 
-<span class="kw">for</span> digit <span class="kw">in</span> <span class="fn">range</span>(<span
-  class="num">10</span>):
-idx_c = np.where(y_train == digit)[<span class="num">0</span>]
-imgs = x_train[idx_c].astype(np.float32) / <span class="num">255.0</span>
-prom = imgs.mean(axis=<span class="num">0</span>)
-mse = ((imgs - prom) ** <span class="num">2</span>).mean(axis=(<span class="num">1</span>, <span
-  class="num">2</span>))
+<span class="kw">for</span> digit <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>):
+    idx_clase = np.where(y_train == digit)[<span class="num">0</span>]
+    imgs = x_train[idx_clase].astype(np.float32) / <span class="num">255.0</span>
+    prototipo = imgs.mean(axis=<span class="num">0</span>)
+    mse = ((imgs - prototipo) ** <span class="num">2</span>).mean(axis=(<span class="num">1</span>, <span class="num">2</span>))
+    intensidad = imgs.mean(axis=(<span class="num">1</span>, <span class="num">2</span>))
 
-axes[<span class="num">0</span>, digit].imshow(imgs[mse.argmin()], cmap=<span class="str">"gray"</span>)
-axes[<span class="num">0</span>, digit].set_title(<span class="str">f"D{digit}"</span>, fontsize=<span
-  class="num">8</span>); axes[<span class="num">0</span>, digit].axis(<span class="str">"off"</span>)
+    axes[<span class="num">0</span>, digit].imshow(imgs[mse.argmin()], cmap=<span class="str">"gray"</span>)
+    axes[<span class="num">0</span>, digit].set_title(<span class="str">f"D{digit}"</span>, fontsize=<span class="num">8</span>)
+    axes[<span class="num">0</span>, digit].axis(<span class="str">"off"</span>)
 
-axes[<span class="num">1</span>, digit].imshow(imgs[mse.argmax()], cmap=<span class="str">"gray"</span>)
-axes[<span class="num">1</span>, digit].axis(<span class="str">"off"</span>)
+    axes[<span class="num">1</span>, digit].imshow(imgs[mse.argmax()], cmap=<span class="str">"gray"</span>)
+    axes[<span class="num">1</span>, digit].axis(<span class="str">"off"</span>)
 
-axes[<span class="num">2</span>, digit].imshow(imgs[imgs.mean(axis=(<span class="num">1</span>,<span
-  class="num">2</span>)).argmin()], cmap=<span class="str">"gray"</span>)
-axes[<span class="num">2</span>, digit].axis(<span class="str">"off"</span>)
+    axes[<span class="num">2</span>, digit].imshow(imgs[intensidad.argmin()], cmap=<span class="str">"gray"</span>)
+    axes[<span class="num">2</span>, digit].axis(<span class="str">"off"</span>)
 
-<span class="kw">for</span> ax, lbl <span class="kw">in</span> zip(axes[:,<span class="num">0</span>],
-[<span class="str">"Tipico"</span>, <span class="str">"más atipico"</span>, <span class="str">"Trazo
-  debil"</span>]):
-ax.set_ylabel(lbl, fontsize=<span class="num">8</span>)
-plt.tight_layout(); plt.show()
+<span class="kw">for</span> ax, etiqueta <span class="kw">in</span> <span class="fn">zip</span>(axes[:, <span class="num">0</span>], [<span class="str">"Tipico"</span>, <span class="str">"Más atipico"</span>, <span class="str">"Trazo debil"</span>]):
+    ax.set_ylabel(etiqueta, fontsize=<span class="num">8</span>)
 
-<span class="fn">print</span>(<span class="str">"Los ejemplos 'más atípicos' (fila 2) son los de mayor
-  riesgo de error."</span>)
-<span class="fn">print</span>(<span class="str">"Revisar si corresponden a ruido de etiquetado o
-  variabilidad natural."</span>)
-</div>
+plt.tight_layout()
+plt.show()
+
+<span class="fn">print</span>(<span class="str">"Los ejemplos 'más atípicos' (fila 2) son los de mayor riesgo de error."</span>)
+<span class="fn">print</span>(<span class="str">"Revisar si corresponden a ruido de etiquetado o variabilidad natural."</span>)</div>
           <div class="output info">
 <div style="background:#ffffff;border-radius:8px;padding:12px;margin:0 0 14px 0;overflow-x:auto;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABigAAAHsCAYAAABIRSU4AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAGKKADAAQAAAABAAAB7AAAAACjU0eXAABAAElEQVR4AezdC9xM1f748f3kkkvlTrqRiFzKUXSPouSeohuhOrqe7iJxCuFIknAqujio06+OCKlUKtEJIcrtlJJKF1QuhYj5z3f/m6dZ+7ue59kzz+znmT3PZ79eZdZ31l57rfdaM8/MXrP3yopEN4cNAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEChAgYMK8FgcCgEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBwBZigYCAggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIBAgQswQVHg5BwQAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEmKBgDCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggECBCzBBUeDkHBABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQSYoGAMIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAQIELMEFR4OQcEAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBJigYAwggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIBAgQswQVHg5BwQAQQQQAABBBBAAIGiJfDqq686b731VtFqNK3NU4BxkScRGRBAAAEEEEAAgYwXYIIi47uYBiKAAAIIIIBAURK45557nJtuuil0TT7vvPOcf/3rX4Ve72+++capW7eus3bt2pTXJdE2BlmXWOMWL17sSL2C3OQYjzzyiHPSSScFeZgcy5b+TGRyROor++zYsSPHMvP7xPTp052rrroqv8WEev+gxkUyrxvpi2HDhuXq6X39Jjquci2cJxFAAAEEEEAAgSIsULwIt52mI4AAAggggAACKROQiYEZM2a45ZUoUcKpXr2606lTJ+eGG25wihfnI1de0NOmTXNKly6dV7ZQPC8nn4cPH+4sXbrUqG+ibZQxtHDhQqdChQpGOWFK/PTTT84DDzzgPPHEE06VKlUCrfq4cePciYiZM2caxxHDcuXKGbHcEn/5y19c90MPPTS3bIE/JyfEe/To4fTq1SvwYxX0AQpyXKSqbYm+flN1XMpBAAEEEEAAAQQyXYBvy5new7QPAQQQQAABBApM4Oyzz3b+8Y9/OHv37nXmz5/vDBkyxJHJiuuvvz7hOuzfv9/JyspyDjqoaFzwWrFixYSNwrZDom0sVqxY4Cf1gzaUNr/yyitBHybX8hOdGClZsmRo3MP6PpEO4yLXQWN5MtHXr6UIQggggAACCCCAAAIWgaLxjdfScEIIIIAAAggggECqBWInNo888kjnyiuvdM444wzn7bffdg+zfft2p2/fvk7Tpk3dW9389a9/db788svsKsiv7k855RRn3rx5Ttu2bZ1GjRo53377bfbz8Q8+++wzd9KjSZMmjvzaW4711VdfxWfJfvzee+85V1xxhVv2qaee6u4Xn1cmU2Qi5ayzznKPee655zoTJkzI3l9uczNgwADntNNOc+R48ovudevWZT/v94HcYqdz587uMVq2bOmMHz/e+f3337N3994+Ja/jyq/l5QoV+VVzixYtXIdBgwY5csL2ySefdM4880zn9NNPdx5//PHsY8gDuS3Lv//9b0f8TzzxREfq8vrrrxt5vIklS5Y4Xbp0cRo2bOg6jRo1yqh7fH65bU3//v2dnTt3useS40ldZfO2Ma+62G5Vk1vfHzhwwHU955xz3LqKj/R/fje5/Y1cBSG3wJHxK+P6xRdfdHbt2uW2Vcbg+eef707KxY4l/XDvvfe6bRbn1q1bO5MnT4497f4rVuLauHFjd3xefvnlzqZNm4w88YmHHnrILUduFSX9NmbMGGffvn1uFnn9yJiSsSmu8p/EZJPHsVs8xUznzJnjyPHkdda+fXtH+ji22W7xtGzZMveWTHJsMbj22msdeU3LJq+hoUOHuuNNypPX28cffxwrLql/xVwsZMIz1h4pKKf3CTne1Vdf7chr/OSTT3a6d+/urF69OvvYsl+snPh/Y2MzmbGTLuNC2n7RRRe5fXnxxRdbb8/26aefuq95Gasyfu+++25HruKI32TMynuh+ImjjK9IJJKdxfv6zX6CBwgggAACCCCAAAL5EmCCIl987IwAAggggAACCOQscPDBB2efQJVbQK1atco9Yf7CCy+4J76uu+667OellD179rgn1+Vkp/zqvFKlSqrwH374wT35KJMhcsJXTjxecsklOZ4w3717t3vi8qWXXnLXeJCrMm6+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M3Xq1KSPxY4IxARyG3eSZ8mSJc6DDz7oyHteJBJxx+Ff/vKX2O78i0BSArmNu8cff9x5/fXXs8v9+uuvna5duzr9+/fPjvEAgWQEcht38h533333OWvWrHGLlr+3cm6lYsWKyRyKfRAwBHIbe7t27XIeeOABZ9WqVe732latWjl33XUX32sNwT8S0Q8ibBaBc889NxJ988p+Zu7cuZGTTz45smLFikj0g1ykbdu2kV9//TXy22+/RTp37hx55513svPyAIFkBXIbd999911k5cqVkeeffz5y4403JnsI9kNACeQ27pYuXRrZvHmzu8+OHTsi0T+okUWLFqkyCCCQqEBu427nzp2R6KSYW6T8nb3kkksib7zxRqKHID8CVoHcxl5sh+gXiciAAQMiHTt2jIX4F4F8CeQ27l566SU+2+VLl51zEsht3H3//fcReX79+vXu7vL3dvv27TkVRRwB3wK5jbv4QmTMNWvWLPLJJ5/Eh3mMQFICuY27SZMmRW655ZbIgQMH3LLlM150cjap47ATAl6B3Mbe6NGjI3fffbc79vbu3Ru59tprI6+++qq3CNJRAW7xZJu1scQuuOAC5/LLL3eefvppJzqYnE6dOjllypRxSpYs6URPnDivvPKKZS9CCORPIH7cHX744c6JJ57ojrn8lcreCOQuED/uohOzTpUqVdwdDj30UKdWrVrOpk2bci+AZxFIQiB+3B1yyCHu1RNSTPSDnPsfV08kgcouvgTix57s8N///tf54YcfnA4dOvjan0wIJCPgHXfJlME+CCQqED/u/v3vfzvt27d3jjvuOLcY+V4rV++wIZBqgfhxF1/2W2+95ch33IYNG8aHeYxASgTix518j5A7o8iV2b///rsjv2qXsceGQBAC8WNv3bp1ztlnn+1eMSFXZsvdULg6267OBIXdxRo96aSTnOgvTJzoL9mdI444IjuPXB4mMTYEghCIjbsgyqZMBHISsI07ef+LXkXmnHHGGTntRhyBfAnEj7vly5e7J4hPP/1057TTTnNatmyZr7LZGYHcBGJjL3qlmPPQQw85gwYNyi07zyGQEoHYuJPCli1b5v4ASn4Q9dprr6WkfApBwCYQG3eff/65e2unXr16uWNPbkEhJ+3YEAhCIDbu4sueNm2a06VLl/gQjxFIqUBs3Mnf1rJly7rfY+UEcfRqbad79+4p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d5VnwYIFKtayZUsVq1ChgooRKDyBK664Qh38+++/V7E77rhDxVK55sRxxx2nyveuJVG3bl2VZ+/evSr2j3/8Q8XCGtBnucPaEuqNAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACoRFggiI0XUVFEUAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBDIHAEmKDKnL2kJAggggAACCCCAAAIIIIAAAggggAACCCCAAAKhEWCCIjRdRUURQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEMgcgVAtkm1bFCwSifjqjfnz56t87733noqFJWBbENtmYYuFpY1FuZ5nnnlm0s3/9ttvk96XHRFIVqBWrVrGrldeeaWRlsRvv/2mYm+88YaKEQivgG3xuYceesho0OWXX26k85s45phjjCKWL19upCVhW4SbRUQVU4EGypUrZxzvggsuMNKSKFasmIp5x5Nk2LFjh8qXykDVqlVVcddff70R87ZHnrS9v9kWS/zpp5+Mskikn8Att9yiKuUdAypDNNC0aVMVfuSRR1Ts119/VbFt27apmDdgWwTU9hrx7kc6HALNmzf3VdFp06YZ+fbs2WOk85s4+OCDjSJat25tpCXRpUsXFduyZYuKTZ061YitWLHCSJNAICbQqFGj2EP3X9tixrZzHVu3bjX2I5F5Am+++abRqK+++spIS8L7/UBiw4YNk38S3ubOnav26dChg4rZAj///LMtTKyQBGyf171/l6RqmzZtSlkNa9eurcoaN26citkWxfZmmjVrljfkLF26VMXCGuAKirD2HPVGAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQCDEAkxQhLjzqDoCCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAmEVYIIirD1HvRFAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQCLEAExQh7jyqjgACCCCAAAIIIIAAAggggAACCCCAAAIIIIBAWAVCtUh25cqVk3a2LUi3a9eupMsLcseSJUuq4u+8804VI5C5Av/6179U47p27apiq1atUjE/iyqqnQggkE+BNm3aGCWULVvWSEti9+7dKsZ4VSShDowaNUrV/7LLLlMxb+Dzzz/3hpzNmzermHdRPMlw4oknGvnatWtnpCXRp08fFbMtfvbUU0+pfASCEWjSpIlRsG2BdSPDH4lnnnlGhe+9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bp3n3h988EGeeTItA1dQZFqP0h4EEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBEIgwARFCDqJKiKAAAIIIIAAAggggAACCCCAAAIIIIAAAgggkGkCTFBkWo/SHgQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEQiDABEUIOokqIoAAAggggAACCCCAAAIIIIAAAggggAACCCCQaQJpvUj2mjVrDO+1a9caaUnYFpQuX768ymdbzGvfvn0qXyoDN954o1HcTTfdZKQlYau/yhQNbNmyxQg/8cQTRppEeAXWrVunKm9bMO7II49U+QgULQHbYkodO3ZUCLYF1Tdv3mzke/LJJ420JM477zwVO/3001XMFvCOY9siZO3atVO7Tpo0ScXat29vxH7//XcjTQKBeAHvwnW2hTrj88cer1y5N5Km5QAAQABJREFUMvaQf0MkkMoFsW3Nti3eeckll6is06dPN2LLli0z0iQQQACBIASuuuoqVWyHDh2MmG1BbG8e2WHhwoXGfjklvO+L3oWuZT9b+U899ZQqcvTo0SpGoGgJTJkyRTW4ZMmSKjZt2jQjNnfuXCNNItwC1atXVw2wfRdVmaKBs88+2wgvX77cSEvC7+dF72LsqqBo4K677lLhe++9V8UIIOBX4PDDD88z6+LFi/PMk2kZuIIi03qU9iCAAAIIIIAAAggggAACCCCAAAIIIIAAAgggEAIBJihC0ElUEQEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBTBNggiLTepT2IIAAAggggAACCCCAAAIIIIAAAggggAACCCAQAgEmKELQSVQRAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAIFME0jrRbLr169vePtdUNq2eNjQoUONsiRhW8RVZbIE/v73v6topUqVVOycc84xYt72yJO2xWy9C2JLPu/iuN4FaSUPWzgF6tWrpyrud0Hsl19+We1LIHMFGjZsqBpnew/54osvVL4WLVoYMdsihX4XxN65c6dRliQuvvhiI1asWDEjLQnbItkXXHCByletWjUjZls03shAokgLeP+21qxZ05eHd/FFXzuRKeMFOnbs6KuNzz//vK98ZEIglQJHHHGEUdzkyZONdE6JRYsW5fQU8TQReOWVV1RNRo4cqWKdO3dWMW9g1qxZ3pBj++5o+8582223qX0bNGhgxGzfVW2LyI4fP97YTxL79u1TMQKZK9C9e3fVuEaNGqnY119/rWIDBw5UMQKZI3DssceqxlStWlXFvvvuOxVbunSpEfvtt9+MdCKJCRMmqOzecdu+fXuVh0WyFQmBBASaN2+ucm/fvt2Ivfnmm0a6KCS4gqIo9DJtRAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAgzQSYoEizDqE6CCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggUBQEmKIpCL9NGBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQTSTIAJijTrEKqDAAIIIIAAAggggAACCCCAAAIIIIAAAggggEBREEjrRbJfe+01ow9sCyUNGzbMyJNTwraY8MSJE3PKnh33LnQtT3gXg83OnMeDgw7S80EbNmxQe7Vt21bFbAubqUwEMkbgs88+U20pVaqUii1fvlzFCCBQvLh+a3/yyScNmNatWxvpnBK//PKLeqpr164q5uc9avbs2Wq/Dh06qNiHH35oxBo3bmykJbF582YVI1CwAkcffbQ6YI0aNVRs4cKFKpZs4LDDDlO7Dh8+XMW8gffff98bcpYsWaJiBBC48sorFYJtQfUZM2aofAQQSFagVq1aatcePXqoWO/evY1Y9erVjbQkli1bpmIPPvigihFILwHbZ/8RI0aoSt5zzz0q5g1cccUV3pD1+2vZsmVVvqysLBV78cUXjdgjjzxipCXBQuyKpMgFTjrpJNXmsWPHqtimTZtUzLb4+8aNG1U+AkVP4Omnn1aNzs+i2N7C9u3b5w053jFap04dlYcAAn4FKlSooLLa3vNWrlxp5Nu6dauRLgoJfca8KLSaNiKAAAIIIIAAAggggAACCCCAAAIIIIAAAggggEChCjBBUaj8HBwBBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAgaIpwARF0ex3Wo0AAggggAACCCCAAAIIIIAAAggggAACCCCAQKEK6BuVF2p1cj+47R7AQ4cOzX2nP5494YQTVD7b/TO9mWz34YxEIt5svtK29SY6duyo9vVzL3e1E4GMErDdi9h2b1pbLKMgaIwhsHPnTiOdU+KYY45RT9li3kw//PCDN+T07NlTxd544w0V8xO45pprVLYvv/xSxd59910jxnoTBkehJCpXrqyOa/tbZVuz5Pjjjzf23b59u5HOKXHooYeqp8aPH69i5557rhH7+eefjbQk7r77bhU7cOCAihEoWgK1a9dWDd61a5eKzZw5U8UIIOBHoF69eirbv/71LxWrWrWqitWsWVPFvIG3337bG3Js6w9s2bJF5SOQXgL79+9XFbKtv/jdd9+pfG3atDFitvulb9u2zcgjCdt3a9uaTR988IGxr62uRgYSRVLAtgZeuXLllMX69etV7JNPPlExAgiIwA033KAgvOudzJkzR+WxBZ599lkV7tSpk4p516G1ve+qnQggkINA8+bN1TO290a/41gVlkEBrqDIoM6kKQgggAACCCCAAAIIIIAAAggggAACCCCAAAIIhEWACYqw9BT1RAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAggwSYoMigzqQpCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgiERYAJirD0FPVEAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQCCDBEK1SLZtcZpnnnlGdYdtIVaVKcWBb7/9VpU4efJkI/bcc88ZaUnYFhlVmQgUOQHbwsHDhg1TDt98842KEchcgSFDhqjGbdiwQcUuueQSFfMuzvTCCy+oPH/7299U7Mcff1SxZAO2spo2baqKsy1SqzIRKFCBrKwsdbzSpUv7ir3zzjtGvokTJxrpnBLXXnuteurkk09WMW9g5MiR3pCzaNEiFSOAwO7duxVCtWrVVMy2YLvKRCDtBEqVKqXqdNZZZxmxrl27GmlJHHHEESrmN7B582Yj67nnnmukJXHIIYeomG0R6xdffFHlmzp1qhH78MMPjbQkbGWpTARCIXDgwAFVz3HjxvmKqUwEEEixwOGHH26U+NprrxlpSdg+P1566aUq3759+1SMQGYLfPbZZ6qBtu+nl112mcrXoUMHI+ZNG0/GJZ544om4lP+H//d//+c/MzkRSFLg+++/T3LPzNmNKygypy9pCQIIIIAAAggggAACCCCAAAIIIIAAAggggAACoRFggiI0XUVFEUAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBDIHAEmKDKnL2kJAggggAACCCCAAAIIIIAAAggggAACCCCAAAKhEWCCIjRdRUURQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEMgcgaxIdPPTHNsCR372CzqPrV4333yzOuzAgQNVrHLlyirmDdjKX716tTebY1uYZ+PGjSpfpgV8Dp+k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vP322ypmW28i2dfJrFmzVPlFNWAzTHaMhd3QtuZL7969VbP8rjmhdizkAFdQ/L/27j/u77neH/hmW2ZlDVuSkhRp5Odxpppf4ZA1YqJaE5ofO4pSkyIiHPJrhyND4mgdZ6FxRCWijJBfLXbmHKvRyZiZTUzK7Lv37Vvq9X6+Zp9d1+dzXe/353PfP67n43q93+/X6/567bPr+rxc16uXJ8DjCRAgQIAAAQIECBAgQIAAAQIECBAgQIBAJwrYoOjEWTdmAgQIECBAgAABAgQIECBAgAABAgQIECDQywI2KHp5AjyeAAECBAgQIECAAAECBAgQIECAAAECBAh0ooANik6cdWMmQIAAAQIECBAgQIAAAQIECBAgQIAAAQK9LFCZQ7KPPPLIQDFw4MCQCVZO4NJLLw0XfOxjHwvZHXfcEbJODf793/89GfqIESOSuijWWWedkB111FEhyx389uSTT4Z25SB36M9//Md/lJv1GTp0aMjKwQUXXFCO+ixatChkucPCQiNBjwnkDiCcPn16eH7uoKTcQVKzZs1Krs21mTlzZtKmKHIHiuba5fpWvtnixYvLUZ/zzz8/ZJMnTw5ZOcj1v9xGHQW4RZNWJbnXcf6t0nZfAq0V+PKXvxweMGHChJC1Oth///2TRzzzzDNJvTLFH/7wh6T5woULk1qxYoGf//znodG4ceNC1tPBFltsER65xhprhCwXfPe73w3xT37yk5A1Kzj++OPDrXIHE4dGgkSgfCB28clclly0EkXua//c+l+JW1auae7rtmYaVm7AFezQ2WefHXp1wgknhKyZwTvf+c5wuze84Q0hKwcHHnhgOWpq/bnPfS7c7/LLLw9ZJwS5v5u5cW+66aZJnPu3pMp/p8vvJx577LHJeIpi0KBBIWtkvYaLKhr4CYqKToxuESBAgAABAgQIECBAgAABAgQIECBAgACBdhawQdHOs2tsBAgQIECAAAECBAgQIECAAAECBAgQIECgogI2KCo6MbpFgAABAgQIECBAgAABAgQIECBAgAABAgTaWcAGRTvPrrERIECAAAECBAgQIECAAAECBAgQIECAAIGKClTmkOztttsuEDXzAJPcASnhgd0IrrjiinB1+TCX3IFlm2++ebguF3S1/295y1vC7Q444ICQOST7bySzZ8/+W7Hso9122y2pi+Lcc88N2RlnnBGyf/zHfwxZI8Ett9wSmt1zzz0h22OPPUJWDtZcc81y1OeQQw4JmUOyA0mPBsOGDUuet/feeyf18ory68zy2pVfTy+99NLQNHeoe2+si/KYynXouKDlArnDnc1Ly9k9gMCrArm/b7m/l69e4IOmCgwdOjTcL5eFRk0O7rvvvqbdsfzv+9SpU8O9582bF7If/vCHIevU4PHHH6/10OfPnx/6f8opp4Ts+eefD1mzgvXWW69Zt3KfFgrMmTMn3H3GjBkhq0tQ/r6r6Hf//o29NfbEE0/UZZg90s9LLrkkPGf8+PEhayRYf/31G2nWEW3e8573hHF+9KMfDdlVV10Vsk4NDj300GTov//975O6KL71rW+FrJlB7v3d1VdfPTxi3LhxIfvgBz+YZLkDsZMGbVj4CYo2nFRDIkCAAAECBAgQIECAAAECBAgQIECAAAECVRewQVH1GdI/AgQIECBAgAABAgQIECBAgAABAgQIECDQhgI2KNpwUg2JAAECBAgQIECAAAECBAgQIECAAAECBAhUXcAGRdVnSP8IECBAgAABAgQIECBAgAABAgQIECBAgEAbCjR2ElAPDPy0004LTznmmGNC1sygfGhs7t6zZs0K8Zlnnhmyn//85yErB0ceeWQ56vPe9743ZI0EjfR9efc5+OCDw6cOO+ywkAn+v8DrX//6QLHllluGbJ111glZM4NHHnkk3K6RQ7LDRcuC3OHpgwcPDk2fe+65kAlWTmDrrbcOF9x4440hKx/W1uiBqI22Gz58ePLMc845J6mLotF75Q7Tvv3228P9Gglyh4E3cvDr/fffH26fy0IjAQECPS6Qe23p8U54YMcJzJw5M4z5+uuvT7LRo0cndScVu+22WzLccl188umnn07aFMURRxwRsmuuuSZkguULDBw4MHxy9913D9mPfvSjkOWCIUOGJPHaa6+d1MsrVl111fCpAQMGhKyrQe7A20MOOSS5Xe77j6SBohICP/jBDyrRj2Z14rjjjgu3avTA9vJBvOFGHRbkDh3++Mc/nijk3k9JGiiCQO61+O1vf3to1wnBKaecEoZ50EEHhaz8HtdJJ50U2uSy0EjQawJ+gqLX6D2YAAECBAgQIECAAAECBAgQIECAAAECBAh0roANis6deyMnQIAAAQIECBAgQIAAAQIECBAgQIAAAQK9JmCDotfoPZgAAQIECBAgQIAAAQIECBAgQIAAAQIECHSugA2Kzp17IydAgAABAgQIECBAgAABAgQIECBAgAABAr0mUJlDsq+66qqAsP/++ydZbxwKs/HGGyd9KIpLL700ZKusEvd6unOQdXiAoNcE/vjHP4Zn77fffiFbY401QtbM4IQTTgi3e+Mb3xiy3CHo5UYjRowoR32+/vWvh+yoo44KmWDlBHKHUa+11lrhJuVDZMt1uOAvQTPbNXqvd7/73aE75dfK3L1yh1/n2pWzch0eLiBAgEAXBHKvSbnbeA3KqVQ/mzt3bujkAQcckGSXX355UhfFe97znpANGzYsZK3+ui88sBeC3Lhz3wflrO+8885e6HE9HplbO9ddd13o/Iknnhiy008/PWTlQ7LXWWed0CYXrL766iHeZpttQrbuuusmWa7/SYO/FLnvXcpfL+auk1VP4KKLLqpep1aiR//wD/+QtB49enRSK7ousOOOO4aL2+1Q7JdffjmM8cc//nHImmnx/PPPh/v/9Kc/DVknBLl/S2699dYw9JtvvjlkdQqeeeaZpLv33XdfUhfFTTfdFLLBgweHLGdWbvTggw+Woz5Tp04NWU8G8V31nny6ZxEgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIdKWCDoiOn3aAJECBAgAABAgQIECBAgAABAgQIECBAgEDvCtig6F1/TydAgAABAgQIECBAgAABAgQIECBAgAABAh0pUJkzKHK//+rxxx9PJqU3zqBIOqDoSIElS5aEcc+bN6+hLDTqRrB48eJw9ZQpU0LWyBkU4aJlQe73DOfayVZOIOea+73nuaz8pEbaFNc00q6RNo3eq9F2zXxm7nebDho0qOhK8if39yZpoOiyQG4+/a7+v3HmfP72WR/1tEB35qOr1/r70NOzvOLnPffcc0mjffbZJ6mXV+y7777hUzvttFPIqhocdNBBoWurrrpqyBoJcucWjBkzJlzaCWdQfPOb3wzjPu6440LWSDBgwIDQ7KSTTgpZ7nfnl88HePrpp8N1jZ5Lcd5554Vry3173eteF9q0Orjgggta/Yha3z93HmZXBzRq1KiuXlrZ6375y18mfWv0rNA5c+Yk1xXF/PnzQ9bJwc4771zr4T/11FOh/5dcckmS3XjjjUldFHfddVfIcufq5v59DBdmghdffDGk999/f8g6NZgxY0YY+qGHHppkkyZNSuqiyL23169fv9AuF5S/rs+dTVJuU9yn/LVnkU2cOLH4T/LnySefTOrp06cndVHsueeeIfvOd74TskaC888/PzTLnX0SGrUw8BMULcR1awIECBAgQIAAAQIECBAgQIAAAQIECBAgQCAvYIMi7yIlQIAAAQIECBAgQIAAAQIECBAgQIAAAQIEWihgg6KFuG5NgAABAgQIECBAgAABAgQIECBAgAABAgQI5AVsUORdpAQIECBAgAABAgQIECBAgAABAgQIECBAgEALBfouO8RjaSP37+oBgY3ce3ltxo4dm3zq8ssvT+qVKXIHRzV6OFIjz+np+zez78X4yoefNTLmok2Dy6fR24V2vbHuQicqHGy00Uahd7feemuSvfnNb07q5RVTp04Nn7r22muTLHdAVG8cpFOndZc7iCnX//Jab6RNMTkzZ85M5qgocgcqlRs98sgj5ajPu9/97pDl7rXxxhuHdu95z3uS7CMf+UhSF0V5jEXWyDgbaVPc67TTTiv+k/z56le/mtTdKXL96M79ctfmjHLt6pT1hFsVPZo5l602bGZfc3NR9/7nxtTVrE4WdeprV+ejU67LHaq49957J8M/4IADkrq7RaOHTpafU6d1l3vtLB/SWYzvwgsvLA9T/RoCucNPP/jBD4YrFixYELKuBnVad7kx5r7f6Or7BR/+8IfDI3784x+HrE5B2adRm9whskcffXTTht7qdVd0NPc61bQBLLtRbgy5rJFnXnnllaHZ9ddfH7IbbrghZF0NcmvhhRdeWOHttt5669Am933zqquuGto1Ehx++OGh2cUXXxyyrgZdnaNGn9fqdbf55puHrpQPEc8dHp07nHr48OHhXgsXLgxZeV08+uijoU13gvXXXz+5fN99903qoth+++1DNmrUqJA1EuQMH3rooUYu7XKbFa07P0HRZVoXEiBAgAABAgQIECBAgAABAgQIECBAgAABAl0VsEHRVTnXESBAgAABAgQIECBAgAABAgQIECBAgAABAl0WsEHRZToXEiBAgAABAgQIECBAgAABAgQIECBAgAABAl0VsEHRVTnXESBAgAABAgQIECBAgAABAgQIECBAgAABAl0W6N/lK3vgwu9+97vJU8qHkhSfvOKKK5I2RfH6178+ZLlDrEOjbgR1uv/BBx/cjZG6dHkCuXW3zz77hOblw3rWWmut0Ga//fYL2cc//vGQvetd7wrZmmuuGbJGgr322is0Kx/M89Of/jS02WCDDUL28MMPh+ymm24KWfmgp/IBZuGCGga5g5u/8pWvhJGUD5KaP39+aFN+TSwa5O6fuzbcrBvBsGHDwtWTJ09OsvJ4ik/msuSivxSNtMu1ybk285DsXF9lBAqB3Hok0xoB1q1xddf2ESgfsliM7PHHHw8DbObXCs0+KDJ0tqJB7rDHSy65JPS2fJjq+PHjQ5tOCcqv4TnDU089NXA080DscPMODho5CLZuPOuuu26XuvyLX/wiXJf7Pis06vAgd6juJpts0iWVq6++Olw3bdq0kDUzGDlyZLjd2muvnWS590lyBxN39UDs3BhzB4YnnVKsUKA8j8UFf/rTn8J1P/vZz0LWzGDTTTcNt8u9Z3feeecl7d773vcm9coU5b+XH/3oR8Pljz32WMh6O1iltzvg+QQIECBAgAABAgQIECBAgAABAgQIECBAgEDnCdig6Lw5N2ICBAgQIECAAAECBAgQIECAAAECBAgQINDrAjYoen0KdIAAAQIECBAgQIAAAQIECBAgQIAAAQIECHSegA2KzptzIyZAgAABAgQIECBAgAABAgQIECBAgAABAr0u0HfZwVRLG+lF+UCrRq7piTazZ88Oj1lvvfVCljvE+pVXXgntuhr09P0b7fstt9wShvSpT30qZE899VTIGgkaXD6N3CrbpqrrLtfZj3zkIyG+6qqrQrZo0aIk69evX1IXxeDBg0PWjsEOO+yQDGv69OlJvbyiTuuufDBiMaa77747DK281m+//fbQ5vDDDw/ZrFmzQtbq4JxzzgmPOOqoo5IsN0flMRYXfP/730+uK4rywZ177713aJM7qDv3zP79+4druxrk7t/Vey3vupzR8trWJe8Jt962aPW8tdqwTv1vdV97Yy01c36b6dPMfuVcm9nX3P1bna222mrhEbl/p0OjFgcHHHBAeMJmm20WsmYGu+yyS7jdrbfeGrJGgnZcd4MGDUqGPm7cuKQuigsvvDBknRBMnjw5DPOII44IWavXRavv3+rXuyVLlgSzRt4vOP/888N1Rx99dMiqGmy++eaha1OmTAnZ8OHDkyxns/HGGydtiiL3XlNo1I2g1euu6Fqr194xxxwTBE4//fSQNRI8+uijodmCBQtC1swgN+89/V7M6NGjw5BuuOGGkDUzaPXaa/W6y/3dv//++1dIdNNNN4U2Tz/9dMhywaRJk5J4o402Suqi2GOPPUK24447hmzdddcNWVeD8oHYxX3KB7vPmTOnq7dv6nUrWnd+gqKp3G5GgAABAgQIECBAgAABAgQIECBAgAABAgQINCJgg6IRJW0IECBAgAABAgQIECBAgAABAgQIECBAgACBpgrYoGgqp5sRIECAAAECBAgQIECAAAECBAgQIECAAAECjQg075dzN/I0bXpc4LDDDgvP7Op5E+FGgkRg1113TeqiyJ1NssYaa4R2nRrcfPPNydAHDhyY1O1Q3HfffWEYP/nJT0K2++67J9l2222X1EXx3//93yG75pprQnbttdeGrBzk7p87R6XRsx4a+T2T//qv/1ruRp/TTjstZOUzKHLXbb/99uG6mTNnhkxAoDsCjazr7tzfta8twP+1fXy2dwXOPffc0IFDDjkkZO0WTJ06NQxpxowZIRP8TWDx4sV/K5Z9dMkllyR1UfzgBz8I2Wc/+9mQDR06NGQHH3xwyOoS/PGPfwxdXdHvqA4XCBoSeOKJJ0K7iy++OGRVDXK/sz133kTuTIGqjqkd+vXMM8+EYZTPRMmduRkuWha8613vysW1zsrnauTOcvzlL39Z6zH2RufL7xcUfSh/LZI7f+uf/umfutzdsWPHdvnaZl2YO2dj1KhR4fbz5s0LWR0CP0FRh1nSRwIECBAgQIAAAQIECBAgQIAAAQIECBAg0GYCNijabEINhwABAgQIECBAgAABAgQIECBAgAABAgQI1EHABkUdZkkfCRAgQIAAAQIECBAgQIAAAQIECBAgQIBAmwnYoGizCTUcAgQIECBAgAABAgQIECBAgAABAgQIECBQB4G+yw6hWtpIR6t6UOHOO+8cuv/lL385ZDvttFPIXnnllZB1NcgdhtzK+5cPWyv6fffdd4fu5w5yaeYh2Q0un9CvRoOqrrtc/4cMGRLiz3/+8yETLF/gxBNPXP4n/+4zdV93uQMOJ0+e/Hcj7NMnd2B17u9DzqKRdo20KTrUaLvyAWnjxo1LxlMUN910U8jqFOSsm93/nHezn9Hb9+sJx0bGWCfrVpvVyaKRua1bm2bObzPnspn9ys1JM/uau3+rswceeCA8IncgY2hUo+Db3/526O2ECRNC9vLLL4esq4F199pyub83AwYMeO2LeumzRx55ZHjy//zP/yTZDTfckNRFUT5gNzRoQdCO6678d/Xaa68NcnPnzg1ZVYPcAcqPPPJIQ90tv1fz0EMPhetyh+e22qfV664YZO41Iwy+ycGcOXOSO6633npJXfWi/D5e7sDhr3zlKw0N45prrkna/eEPf0jq3ipavfZ6Y9295S1vSTinTp2a1EXxhje8IWSt/trtz3/+c3hm7mvIhx9+OGk3adKkpC6K8nsuRdbq16niGc36s6J15ycomiXtPgQIECBAgAABAgQIECBAgAABAgQIECBAgEDDAjYoGqbSkAABAgQIECBAgAABAgQIECBAgAABAgQIEGiWgA2KZkm6DwECBAgQIECAAAECBAgQIECAAAECBAgQINCwgA2Khqk0JECAAAECBAgQIECAAAECBAgQIECAAAECBJolUPtDshuFuOiii0LTgw8+OGRdDcoHLxX3Oe2005LbDR8+PKmLYvr06SHLHXxSPmTmueeeC9dNmzYtZK0OVnTISXefXx53d+/n+vYQ6IR1t/fee4fJGjZsWMhy7d7+9reHdu9+97uTbPHixUldFLNmzQrZ/PnzQ3bqqaeGLPdaFhrVPGj1uit4vObVfJG0qPutXnvWXYsmrsHbVnV+q9qvBllb3mzixInhGaeffnrIqhrcfffdSdduvvnmpC6Kk08+OWTNPBA73HxZYN3lVGStFrDuWi288vffd999k4s+/OEPJ3VRjB07NmS5oPw9Tu66GTNm5C5tadbqdVd0vje+xtt0000Tt89//vNJXRQHHXRQyHojuOSSS8JjywcYT548ObSpe9Dqtdcb666RORkyZEhoNmbMmJA1M8i973LllVc28xG1udeK1p2foKjNVOooAQIECBAgQIAAAQIECBAgQIAAAQIECBBoHwEbFO0zl0ZCgAABAgQIECBAgAABAgQIECBAgAABAgRqI2CDojZTpaMECBAgQIAAAQIECBAgQIAAAQIECBAgQKB9BGxQtM9cGgkBAgQIECBAgAABAgQIECBAgAABAgQIEKiNQMcckl2bGalZR1d0yEl3h1PVw3W6Oy7Xd0/Aunttv0GDBoUGG2+8cZLlDmsqHyCXXKBo+cGdBbHXPAstJ+A1L6fSPlkz57eZryHN7FdutprZ19z9W52ttdZa4RHz5s0LWU8HuYOtf/7zn4du/O53v0uyRx99NKl7q7Dueku+s59r3VVv/idNmpR06ogjjkjq5RVPPPFE+NS2226bZHPnzk3q3ipave6KcdX939rempt2f26r15511+4rqGvjW9G68xMUXXN1FQECBAgQIECAAAECBAgQIECAAAECBAgQINANARsU3cBzKQECBAgQIECAAAECBAgQIECAAAECBAgQINA1ARsUXXNzFQECBAgQIECAAAECBAgQIECAAAECBAgQINANARsU3cBzKQECBAgQIECAAAECBAgQIECAAAECBAgQINA1AYdkd83NVX8RWNEhJ92FcrhOdwXb83rrrj3nteqjavW6K8bvNa/qq6B3+tfqtWfd9c68Lu+p3ZnvZs5ld/qxvLH9fd7Mvv79fX1cbwHrrt7zV9feW3fVm7kxY8YknbrooouSuijmzJkTsk9+8pMhmzVrVsiqELR63RVj9G9tFWa6en1o9dqz7qo351Xo0YrWnZ+gqMIs6QMBAgQIECBAgAABAgQIECBAgAABAgQIEOgwARsUHTbhhkuAAAECBAgQIECAAAECBAgQIECAAAECBKogYIOiCrOgDwQIECBAgAABAgQIECBAgAABAgQIECBAoMMEnEHRYRPe7OGu6HeIdfd5fndddwXb83rrrj3nteqjavW6K8bvNa/qq6B3+tfqtWfd9c68Vv2p1l3VZ6g9+2fdtee8Vn1U1l3VZ6hPn5EjR4ZOzp8/P04AkvQAAChjSURBVGRVPW8idHRZ0Op1VzzT13g5eVmr1551Z43lBFa07vwERU5NRoAAAQIECBAgQIAAAQIECBAgQIAAAQIECLRUwAZFS3ndnAABAgQIECBAgAABAgQIECBAgAABAgQIEMgJ2KDIqcgIECBAgAABAgQIECBAgAABAgQIECBAgACBlgrYoGgpr5sTIECAAAECBAgQIECAAAECBAgQIECAAAECOQGHZOdUZA0LrOiQk4ZvtJyGDtdZDkyHx9Zdhy+AXhp+q9ddMSyveb00uRV/bKvXnnVX8QXQS92z7noJvsMfa911+ALopeFbd70E3+GPbfW6K3h9jdfhi2w5w2/12rPulgPf4fGK1p2foOjwBWL4BAgQIECAAAECBAgQIECAAAECBAgQIECgNwRsUPSGumcSIECAAAECBAgQIECAAAECBAgQIECAAIEOF7BB0eELwPAJECBAgAABAgQIECBAgAABAgQIECBAgEBvCNig6A11zyRAgAABAgQIECBAgAABAgQIECBAgAABAh0u0PAh2R3uZPgECBAgQIAAAQIECBAgQIAAAQIECBAgQIBAEwX8BEUTMd2KAAECBAgQIECAAAECBAgQIECAAAECBAgQaEzABkVjTloRIECAAAECBAgQIECAAAECBAgQIECAAAECTRSwQdFETLciQIAAAQIECBAgQIAAAQIECBAgQIAAAQIEGhOwQdGYk1YECBAgQIAAAQIECBAgQIAAAQIECBAgQIBAEwVsUDQR060IECBAgAABAgQIECBAgAABAgQIECBAgACBxgRsUDTmpBUBAgQIECBAgAABAgQIECBAgAABAgQIECDQRAEbFE3EdCsCBAgQIECAAAECBAgQIECAAAECBAgQIECgMQEbFI05aUWAAAECBAgQIECAAAECBAgQIECAAAECBAg0UcAGRRMx3YoAAQIECBAgQIAAAQIECBAgQIAAAQIECBBoTKB/Y8369Onbt2+jTbXrIIGlS5e2dLTWXUt5a3tz6662U1frjrd63RU4XvNqvURa1vlWrz3rrmVTV+sbW3e1nr7adt66q+3U1brj1l2tp6+2nW/1uitgfI1X2+XR0o63eu1Zdy2dvtrefEXrzk9Q1HZqdZwAAQIECBAgQIAAAQIECBAgQIAAAQIECNRXwAZFfedOzwkQIECAAAECBAgQIECAAAECBAgQIECAQG0FbFDUdup0nAABAgQIECBAgAABAgQIECBAgAABAgQI1FfABkV9507PCRAgQIAAAQIECBAgQIAAAQIECBAgQIBAbQVsUNR26nScAAECBAgQIECAAAECBAgQIECAAAECBAjUV8AGRX3nTs8JECBAgAABAgQIECBAgAABAgQIECBAgEBtBWxQ1HbqdJwAAQIECBAgQIAAAQIECBAgQIAAAQIECNRXwAZFfedOzwkQIECAAAECBAgQIECAAAECBAgQIECAQG0FbFDUdup0nAABAgQIECBAgAABAgQIECBAgAABAgQI1FfABkV9507PCRAgQIAAAQIECBAgQIAAAQIECBAgQIBAbQVsUNR26nScAAECBAgQIECAAAECBAgQIECAAAECBAjUV8AGRX3nTs8JECBAgAABAgQIECBAgAABAgQIECBAgEBtBfrXtuc6ToAAAQIECBAgQIAAAQIECLRMYPz48cm9P/WpTyV1UXznO98J2cUXXxwyAQECBAgQIEAgJ+AnKHIqMgIECBAgQIAAAQIECBAgQIAAAQIECBAgQKClAjYoWsrr5gQIECBAgAABAgQIECBAgAABAgQIECBAgEBOwAZFTkVGgAABAgQIECBAgAABAgQIECBAgAABAgQItFTABkVLed2cAAECBAgQIECAAAECBAgQIECAAAECBAgQyAk4JDunIiNQQYHf/va3oVef//znQ3bttdeGTECAAAECBAgQIECAAIHXErjuuuvCp4cPH55kxxxzTFIXxbRp00ImIECAAAECBAg0KuAnKBqV0o4AAQIECBAgQIAAAQIECBAgQIAAAQIECBBomoANiqZRuhEBAgQIECBAgAABAgQIECBAgAABAgQIECDQqIANikaltCNAgAABAgQIECBAgAABAgQIECBAgAABAgSaJmCDommUbkSAAAECBAgQIECAAAECBAgQIECAAAECBAg0KuCQ7EaltCPQgwLrr79+eNqQIUNC5kDsQCIgQKAXBdZYY43w9BtuuCHJRowYkdRFcfXVV4csdwjnY489FtoJCDRT4OSTTw6323LLLUM2evTokAkIECBQJ4Hx48eH7u6+++4hO+yww5LMgdgJR22K448/PvR1q622Ctnvf//7kOW+TrvrrruSdi+99FJSKwgQIECAwMoI+AmKldHSlgABAgQIECBAgAABAgQIECBAgAABAgQIEGiKgA2KpjC6CQECBAgQIECAAAECBAgQIECAAAECBAgQILAyAjYoVkZLWwIECBAgQIAAAQIECBAgQIAAAQIECBAgQKApAjYomsLoJgQIECBAgAABAgQIECBAgAABAgQIECBAgMDKCDgke2W0erFtv379kqdvuOGGSV0UG2+8cchywaJFi0J8++23J9nLL7+c1IqeFcgdkv3ggw/2bCc8jQABAisp8Oyzz4Yr3v/+9yfZFltskdRFMWnSpJA99NBDITv00ENDduWVV4ZMQKARgRNOOCE0GzBgQMhyB8mGRgICBAjUTOBTn/pU6PFtt90WsmuuuSZkgvoJzJo1K3R6nXXWCdnb3va2kF177bUhe+6555Ls7LPPTuqi+Pa3vx2y559/PmQCAgQI1E2g/B5t0f9TTjklDGOHHXYI2VVXXRWyQYMGJdmpp56a1J1Q+AmKTphlYyRAgAABAgQIECBAgAABAgQIECBAgAABAhUTsEFRsQnRHQIECBAgQIAA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w5M2iuYJnH766eFmL774YshOOumkkAkIdFXgtNNOC5f+y7/8S8gmTpwYspEjR4asfOhhaCBoe4HcYdfXX399Mu7cYa0TJkxI2hRF7jUwNBIQaFBg4MCBoeXVV18dMgGBKgs8/vjjSfd+/etfJ7WCwF8F+vbt+9cPX/3vaqut9urHf/3gmGOO+euHr/43d7D1vffe++rniw/OPffcpC6KK6+8MmQPPvhgyF5++eWQCaovMHfu3NDJESNGJFnuvYdFixYlbYri+OOPD5kgL+AnKPIuUgIECBAgQIAAAQIECBAgQIAAAQIECBAgQKCFAjYoWojr1gQIECBAgAABAgQIECBAgAABAgQIECBAgEBewAZF3kVKgAABAgQIECBAgAABAgQIECBAgAABAgQItFDABkULcd2aAAECBAgQIECAAAECBAgQIECAAAECBAgQyAtU+pDsTTbZJOn1Nddck9RF8bWvfS1kZ5xxRsjaLdhpp53CkIYPHx6yI444ImSC9hHIHcTUPqMzkq4K5A4KGzZsWHK7G2+8MamLYsCAASE74YQTQtZIsMoqcf87169tttkm3G6XXXZJss033zypi+Id73hHyF566aWQ3X777SH78Y9/nGSXXnppUiuaKzBp0qTkhp/97GeTuii+8Y1vhGzMmDEhu+6660KWO4wsNBJ0vMAjjzwSDHKvU5/+9KdDuw9/+MMh87oRSNo6eN3rXhfGd/nll4ds9dVXT7JPfOITSV0UDsQOJIJuCpQPec19jZQ7HLabj3U5AQIEekVg4403Tp573HHHJXVR7LbbbiH7/ve/H7Lcv+UzZ85M2l144YVJrWh/genTp4dBPvnkk0k2ZcqUpC6K3/zmNyHbYostQvbss8+GTNCnT3wHiQoBAgQIECBAgAABAgQIECBAgAABAgQIECBAoMUCNihaDOz2BAgQIECAAAECBAgQIECAAAECBAgQIECAQBSwQRFNJAQIECBAgAABAgQIECBAgAABAgQIECBAgECLBWxQtBjY7QkQIECAAAECBAgQIECAAAECBAgQIECAAIEo0D9G1UnGjh2bdGbevHlJXRTlwzdDgzYJygerfOYznwkjO+CAA0L2wgsvhExQT4HcQcG33XZbPQej1y0VyK2VO+64I3nmvffem9RFcfDBB4fszW9+c8i22267kK2//vpJlrvXu971rqRNUfz2t78N2S9+8Yskyx10PXHixKRNUcyZMydkgt4XGDFiRNKJK6+8MqmLotymyA477LDiP8mfM888M6mLYq+99kqyu+66K6kVBAqBpUuXBoijjz46ZLfcckvIcq8t1llgauvgoIMOCuPbeuutQzZy5MgkW7hwYVIrCLRCoHw4++DBg1vxGPckQIBASwV23nnncP+zzz47ZP369UuySy65JKmLYsKECSF7/vnnQ1Z+n61ocMEFFyTtct9/JA0UHSFQfr/15JNPDuN+//vfH7Jdd901ZLnvN3bZZZekXfn9m+STbVr4CYo2nVjDIkCAAAECBAgQIECAAAECBAgQIECAAAECVRawQVHl2dE3AgQIECBAgAABAgQIECBAgAABAgQIECDQpgI2KNp0Yg2LAAECBAgQIECAAAECBAgQIECAAAECBAhUWcAGRZVnR98IECBAgAABAgQIECBAgAABAgQIECBAgECbClT6kOxjjz02Yc8dLvLSSy8lbepWDB06NHQ5dwB2+SCg3GF9DsQOlAICbS+w5pprhjFeccUVIVtttdWSrG/fvkldFPfcc0/IygcvFg1mzZoV2pUPtj700ENDm4cffjhk8+fPD9krr7wSMkF9Bd73vvd1qfNDhgwJ1+XW9iGHHJK0c3hxwqFYSYFrr702XHHqqaeG7Nxzz02yY445JqmL4tlnnw2ZoPoCY8aMCZ288MILQ7bllluG7Omnnw6ZgEBPCyxdurSnH+l5BJouUH7/Y6211mr6M9yw9wS++tWvhoePHj06ZOPHjw/ZAw88kGRLlixJ6pUptt9++9D8ueeeC5mAwKJFixKEo446KqlXppg3b15onnt/JjRq88BPULT5BBseAQIECBAgQIAAAQIECBAgQIAAAQIECBCoooANiirOij4RIECAAAECBAgQIECAAAECBAgQIECAAIE2F7BB0eYTbHgECBAgQIAAAQIECBAgQIAAAQIECBAgQKCKApU+g6L8e7kGDBhQRcOG+7TeeuuFtuecc07Icr+/tnwuRXd+z154oKAWAgsXLqxFP3WyZwVyr4u531/44IMPJh2bPXt2UhfFlClTQnbdddeF7KmnngqZgECzBXKveZdddll4zIQJE0ImINBVgQ9+8IPh0qlTp4bs/PPPT7JNNtkkqYti+vTpIRNUX+B3v/td6GTu/JsvfvGLod0ee+yRZHfeeWdSF0X5a/oie+yxx4r/+EOgZQIDBw5s2b3dmEArBN72trclt918882TuigWLFgQMkHvC7z+9a9POpE7b2KzzTZL2hTFjjvuGLLFixeHrKtB7ryJL3zhC+F2I0aMCJmAQDMFyu/NNPPedb6Xn6Co8+zpOwECBAgQIECAAAECBAgQIECAAAECBAgQqKmADYqaTpxuEyBAgAABAgQIECBAgAABAgQIECBAgACBOgvYoKjz7Ok7AQIECBAgQIAAAQIECBAgQIAAAQIECBCoqYANippOnG4TIECAAAECBAgQIECAAAECBAgQIECAAIE6C1T6kOy11147sX322WeTureK1VdfPTx61KhRITv00EOTbPDgwUldFBMnTgzZbbfdFrKlS5eGTNBZArkDY7fYYouAkFs/oZGgbQRyB1a/973vbZvxGQiBFQm84x3vWFETnyeQFRg6dGjIR48eHbKxY8eGbMaMGSETtIfAPffcEwaSy1ZbbbXQbsCAAUl22WWXJXVRbLXVViFzSHYgEayEQPl75HJd3Cr3Pef111+/Ek/RlEDPChx11FHJA2fOnJnURZHLQiNBjwuU3wfbdtttQx/22GOPkHX1QOz+/ePbmuPGjQv3P/DAA0OWex/vySefDO0EBJop8MwzzzTzdm1zLz9B0TZTaSAECBAgQIAAAQIECBAgQIAAAQIECBAgQKA+AjYo6jNXekqAAAECBAgQIECAAAECBAgQIECAAAECBNpGwAZF20ylgRAgQIAAAQIECBAgQIAAAQIECBAgQIAAgfoI2KCoz1zpKQECBAgQIECAAAECBAgQIECAAAECBAgQaBuBeJpMhYZ23333Jb25+OKLk7ooPv3pT4fs+eefD9krr7wSsoEDBybZc889l9RFkTtI5/DDDw/tZs+eHbJvfvObSfaf//mfSV0US5YsCZmAQE5g0aJFId5rr71CNmnSpJAJCBAg0K4CDslu15lt/bg+/vGPh4esskr8f3fmzp0b2gnqKbD66qsnHX/ppZeSuig22GCDkG2//fYh+8AHPhCy8gHYP/zhD0ObX/7ylyETEOiOwOOPP55c/n//939JXRQjR45sKJs+fXpo10iw1lprhWb//M//HLKvf/3rIRMQWHXVVQNCec2ed955oY2gmgInnnhi0rE999wzqYui0QOxy/9uF9fuvPPOxX9e/fONb3zj1Y//+sHdd9/91w9f/W/u674nnnji1c/7gEBPCcyfPz88avTo0SHrtCB+F9ZpAsZLgAABAgQIECBAgAABAgQIECBAgAABAgQI9LiADYoeJ/dAAgQIECBAgAABAgQIECBAgAABAgQIECBAwAaFNUCAAAECBAgQIECAAAECBAgQIECAAAECBAj0uIANih4n90ACBAgQIECAAAECBAgQIECAAAECBAgQIECg0odk77777skMnXnmmUldFPfcc0/IXn755ZDlDslesGBB0u673/1uUhdF7nCdbbfdNrSbM2dOyAQECBAgQIBA8wTWXXfdcLNf//rXIRMQaETg7W9/e2jWt2/fkDlAMZDUNviv//qvpO/Dhw9P6qJ44IEHQjZr1qyQ/ehHPwrZ+eefn2T33ntvUisI9ITAxIkTw2OuuuqqkF188cUhyx1i/bOf/Sxpl/t7M3Xq1KRNUfzqV78KWe7+oZGg4wRyB6q/853vTBzKr9/JJxWVEpg8eXLSn1NOOSWpiyL3Pl5otCzIHbD9+OOPJ00nTJiQ1EVxyy23hExAoCoCt912W+jK0UcfnWTDhg1L6qJ4+umnQ9ZOgZ+gaKfZNBYCBAgQIECAAAECBAgQIECAAAECBAgQIFATARsUNZko3SRAgAABAgQIECBAgAABAgQIECBAgAABAu0kYIOinWbTWAgQIECAAAECBAgQIECAAAECBAgQIECAQE0E+i5d9qeRvuZ+J28j1zWzTa4P/fr16/IjykNfsmRJl+/VqReWDZvtkJvzZj+jLvc78MADQ1cvu+yykHWCmXUXpl3QAwKtXnfFEDrh7293pur+++8Pl8+YMSPJcq+VSYMaFq1ee5267r785S+H1XDkkUeGbMMNNwzZ888/H7J2C6y7dpvReozHumvNPB1yyCHhxpMmTQrZwIEDQ1b+nde5NldccUW4LnfeRPle4aJeCqy7XoL/y2PvvPPO0IHyOT8nn3xyaFP3oNXrrvCpwtd4b33rW8NU7bHHHiGbOXNmyB599NGQPfnkkyETrJxAq9deFdbdyon0bOtBgwaFB5bPSB4/fnxoM2XKlJDVKVjRuvMTFHWaTX0lQIAAAQIECBAgQIAAAQIECBAgQIAAAQJtImCDok0m0jAIECBAgAABAgQIECBAgAABAgQIECBAgECdBGxQ1Gm29JUAAQIECBAgQIAAAQIECBAgQIAAAQIECLSJgA2KNplIwyBAgAABAgQIECBAgAABAgQIECBAgAABAnUSqNUh2XWC7ZS+ruiQk+46OFznb4JDhgz5W/GXj5599tmQdYKZdRemXdADAq1ed8UQOuHvb6NTNXjw4ND0scceC9nRRx+dZJdddllSt0PR6rXXqevurLPOCstjzz33DNlGG20Usk4IrLtOmOXqjdG667k52XTTTcPDPvOZz4Rs1KhRSXbppZcmdVF87WtfC1mdAuuuNbM1duzYcONx48aFbOuttw7Zdtttl2SzZs1K6nYoWr3uCqNO/RqvHdZHK8fQ6rVn3a387H3rW99KLlqyZElSF8Vhhx0WsjoFK1p3foKiTrOprwQIECBAgAABAgQIECBAgAABAgQIECBAoE0EbFC0yUQaBgECBAgQIECAAAECBAgQIECAAAECBAgQqJOADYo6zZa+EiBAgAABAgQIECBAgAABAgQIECBAgACBNhGwQdEmE2kYBAgQIECAAAECBAgQIECAAAECBAgQIECgTgL969RZfSXQyQILFy4Mw3/wwQdDJiBAgEA7CBx66KFhGP369QvZ1KlTQyYg0IjA7373u0aaaUOAAIG2FHjooYfCuA4//PCQCQg0InDUUUeFZmeddVbI+vePb0Htu+++oV07HoodBikgQIDAXwSmTZuWWIwdOzapO6HwExSdMMvGSIAAAQIECBAgQIAAAQIECBAgQIAAAQIEKiZgg6JiE6I7BAgQIECAAAECBAgQIECAAAECBAgQIECgEwRsUHTCLBsjAQIECBAgQIAAAQIECBAgQIAAAQIECBComIANiopNiO4QIECAAAECBAgQIECAAAECBAgQIECAAIFOEIgnFHXCqI2RQJsIbLnllm0yEsMgQIBAKrDrrrumwbJq3LhxIVu8eHHIBAQaESgfRldcc8IJJ4RLhw4dGrL58+eHTECAAAECBDpVYNCgQWHouYOux48fH9rdc889IRMQIECgkwTuvvvuZLjHHXdcUhfF/vvvH7KpU6eGrK6Bn6Co68zpNwECBAgQIECAAAECBAgQIECAAAECBAgQqLGADYoaT56uEyBAgAABAgQIECBAgAABAgQIECBAgACBugrYoKjrzOk3AQIECBAgQIAAAQIECBAgQIAAAQIECBCosYANihpPnq4TIECAAAECBAgQIECAAAECBAgQIECAAIG6CvRduuxPI53v27dvI8206TCBBpdPl1Wsuy7TtfWF1l1bT29lB9fqdVcM3GteZae/VzvW6rVn3fXq9Fb24dZdZaemrTtm3bX19FZ2cNZdZaemrTvW6nVX4Pkar62XUJcH1+q1Z911eWpevXC//fZ79eO/fpA7OHufffb566df/e/s2bNf/bhKH6xo3fkJiirNlr4QIECAAAECBAgQIECAAAECBAgQIECAAIEOEbBB0SETbZgECBAgQIAAAQIECBAgQIAAAQIECBAgQKBKAjYoqjQb+kKAAAECBAgQIECAAAECBAgQIECAAAECBDpEwBkUHTLRrRrmin6HWHef63fXdVewPa+37tpzXqs+qlavu2L8XvOqvgp6p3+tXnvWXe/Ma9Wfat1VfYbas3/WXXvOa9VHZd1VfYbas3+tXneFmq/x2nPtdHdUrV571l13Z6g9r1/RuvMTFO0570ZFgAABAgQIECBAgAABAgQIECBAgAABAgQqLWCDotLTo3MECBAgQIAAAQIECBAgQIAAAQIECBAgQKA9BWxQtOe8GhUBAgQIECBAgAABAgQIECBAgAABAgQIEKi0gA2KSk+PzhEgQIAAAQIECBAgQIAAAQIECBAgQIAAgfYUsEHRnvNqVAQIECBAgAABAgQIECBAgAABAgQIECBAoNICNigqPT06R4AAAQIECBAgQIAAAQIECBAgQIAAAQIE2lPABkV7zqtRESBAgAABAgQIECBAgAABAgQIECBAgACBSgvYoKj09OgcAQIECBAgQIAAAQIECBAgQIAAAQIECBBoTwEbFO05r0ZFgAABAgQIECBAgAABAgQIECBAgAABAgQqLdB36bI/le6hzhEgQIAAAQIECBAgQIAAAQIECBAgQIAAAQJtJ+AnKNpuSg2IAAECBAgQIECAAAECBAgQIECAAAECBAhUX8AGRfXnSA8JECBAgAABAgQIECBAgAABAgQIECBAgEDbCdigaLspNSACBAgQIECAAAECBAgQIECAAAECBAgQIFB9ARsU1Z8jPSRAgAABAgQIECBAgAABAgQIECBAgAABAm0nYIOi7abUgAgQIECAAAECBAgQIECAAAECBAgQIECAQPUFbFBUf470kAABAgQIECBAgAABAgQIECBAgAABAgQItJ2ADYq2m1IDIkCAAAECBAgQIECAAAECBAgQIECAAAEC1RewQVH9OdJDAgQIECBAgAABAgQIECBAgAABAgQIECDQdgI2KNpuSg2IAAECBAgQIECAAAECBAgQIECAAAECBAhUX+D/AcFJ1uoWJdUTAAAAAElFTkSuQmCC" alt="Por clase: ejemplo tipico | más atipico | trazo más debil" style="max-width:100%;display:block;margin:0 auto;"></div><div class="output-label">salida</div>Figura: 3 filas x 10 columnas.
 Fila 1: muestra más cercana al prototipo de su clase.
@@ -2000,7 +2268,7 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
         </div>
       </div>
 
-      <div class="cell">
+      <div class="cell" id="s3h">
         <div class="cell-gutter">
           <div class="cell-type">md</div>
           <div class="run-btn">&#9654;</div>
@@ -2015,7 +2283,7 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
           </div>
           <div class="callout ok" style="margin-top:8px;">
             <div class="callout-title ok">2 — Dataset balanceado, sin sobremuestreo</div>
-            <p>El coeficiente de variacion entre clases es 6.2%. No se requiere SMOTE ni ponderación de la perdida.
+            <p>El coeficiente de variacion entre clases es 5.4%. No se requiere SMOTE ni ponderación de la perdida.
               Registrar esta decisión explícitamente para justificar por que no se aplicó ninguna técnica de balanceo.
             </p>
           </div>
@@ -2027,15 +2295,41 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
           </div>
           <div class="callout ok" style="margin-top:8px;">
             <div class="callout-title ok">4 — Pares confundibles identificados</div>
-            <p>Los pares 4-9 y 3-8 tienen correlación de Pearson entre imágenes promedio superior a 0.93. Registrarlos
+            <p>Los pares 4-9, 5-8 y 7-9 son los más correlacionados entre imágenes promedio, con valores entre 0.85 y
+              0.90. Registrarlos
               antes del entrenamiento para comparar con la matriz de confusion real y evaluar si el modelo supera la
               dificultad esperada.</p>
           </div>
           <div class="callout ok" style="margin-top:8px;">
             <div class="callout-title ok">5 — Área activa informa la arquitectura</div>
-            <p>El digito 1 ocupa 52 píxeles activos frente a 157 del 8. Un modelo completamente denso (sin convolucion)
+            <p>El digito 1 ocupa 115 píxeles activos frente a 241 del 8. Un modelo completamente denso (sin convolucion)
               pierde la estructura espacial necesaria para distinguir digitos de trazo complejo. Las redes
               convolucionales con pooling progresivo son más apropiadas que las densas para este problema.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell" id="s3i">
+        <div class="cell-gutter">
+          <div class="cell-type">md</div>
+          <div class="run-btn">&#9654;</div>
+        </div>
+        <div class="cell-body md-cell">
+          <h3>Checklist para replicar este EDA con un dataset propio</h3>
+          <div class="callout purple">
+            <div class="callout-title purple">Guía de discusión y adaptación</div>
+            <p>El objetivo no es copiar MNIST, sino usarlo como plantilla de razonamiento. Para cualquier dataset de
+              imágenes, cada equipo debe documentar estas decisiones antes de entrenar:</p>
+            <ul>
+              <li><strong>Fuente y objetivo:</strong> de dónde vienen las imágenes, qué se quiere predecir y cuál es la unidad de análisis.</li>
+              <li><strong>Estructura:</strong> número total de imágenes, número de clases, ejemplos por clase y partición train/test/validación.</li>
+              <li><strong>Formato:</strong> resolución, canales, rango de valores de pixel y si las imágenes requieren redimensionamiento.</li>
+              <li><strong>Balance:</strong> conteo por clase, coeficiente de variación y decisión sobre ponderación, submuestreo o sobremuestreo.</li>
+              <li><strong>Calidad visual:</strong> ejemplos limpios, ejemplos atípicos, ruido de etiqueta, duplicados o imágenes ambiguas.</li>
+              <li><strong>Patrones espaciales:</strong> zonas relevantes de la imagen, variabilidad intra-clase y pares de clases que podrían confundirse.</li>
+              <li><strong>Preprocesamiento:</strong> normalización, resize, conversión de canales y aumentos de datos que sí tienen sentido para el problema.</li>
+              <li><strong>Hipótesis para el modelo:</strong> qué arquitectura parece razonable y qué errores se esperan antes de ver la matriz de confusión.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -2046,17 +2340,17 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
           <div class="run-btn">&#9654;</div>
         </div>
         <div class="cell-body md-cell">
-          <div class="repro-note">
-            <div class="repro-note-title">Reproducibilidad — Exploración de datos</div>
+          <div class="doc-note">
+            <div class="doc-note-title">Documentación para reproducibilidad — Exploración de datos</div>
             <ul>
               <li>Fuente del dataset: MNIST via <code>tf.keras.datasets.mnist</code>, version de TF registrada en celda
                 1.</li>
               <li>Decision documentada: normalizacion de píxeles dividiendo entre 255.0 para llevar el rango de [0, 255]
                 a [0, 1].</li>
-              <li>Balance de clases: coeficiente de variacion de 6.2%, no se requieren tecnicas de balanceo (SMOTE,
+              <li>Balance de clases: coeficiente de variacion de 5.4%, no se requieren tecnicas de balanceo (SMOTE,
                 submuestreo).</li>
               <li>Umbral de densidad espacial usado: 0.3. Documentar si se cambia para comparar entre experimentos.</li>
-              <li>Pares confundibles identificados (4-9, 3-8, 3-5): registrarlos para cotejar con la matriz de confusion
+              <li>Pares confundibles identificados (4-9, 5-8, 7-9): registrarlos para cotejar con la matriz de confusion
                 post-entrenamiento.</li>
               <li>Guardar todas las figuras en <code>results/figures/</code> con nombres descriptivos que incluyan fecha
                 y nombre del dataset.</li>
@@ -2085,6 +2379,10 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
           <p>Este enfoque, denominado <strong>transfer learning</strong>, es la estrategia más eficiente para
             prototipado rápido, especialmente cuando el dataset propio es pequeño o el presupuesto computacional es
             limitado.</p>
+          <p>La idea importante para clase es que un modelo preentrenado no es una solución automática: es un punto de
+            partida. Su utilidad depende de tres decisiones: qué tan parecido es el nuevo dataset al dataset de
+            preentrenamiento, si se usa como extractor de características o con fine-tuning, y si el preprocesamiento
+            respeta exactamente la entrada que el modelo espera.</p>
         </div>
       </div>
 
@@ -2095,6 +2393,9 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
         <div class="cell-body diagram-cell" style="align-items:stretch;">
           <div class="cell-body md-cell">
             <h3>Catálogo de modelos: contexto y características</h3>
+            <p>Este catálogo no busca memorizar arquitecturas. Sirve para comparar criterios de selección: costo,
+              precisión, tamaño de entrada, tipo de datos de preentrenamiento y estrategia de adaptación al dataset
+              propio.</p>
 
             <div
               style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:12px;font-weight:600;border-bottom:1px solid var(--border);padding-bottom:8px;">
@@ -2112,12 +2413,19 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 instrumentos musicales.</p>
               <p>Como extractor de características, sin la cabeza de clasificación original, produce vectores de
                 representacion de 1,280 dimensiones que pueden conectarse a capas densas personalizadas para cualquier
-                tarea nueva.</p>
+                tarea nueva. Es una buena primera opción cuando se necesita inferencia rápida, prototipos ligeros o
+                despliegue en entornos con memoria limitada.</p>
+              <p><strong>Para discutir en clase:</strong> funciona mejor cuando el dataset nuevo contiene objetos o
+                escenas visualmente parecidas a fotografías naturales. Si se aplica a datos muy distintos, como MNIST,
+                conviene usarlo primero para evidenciar desajuste de dominio y después decidir si se justifica
+                fine-tuning.</p>
               <div class="model-specs">
                 <div class="model-spec">Parametros: <span>3.4 M</span></div>
                 <div class="model-spec">Entrada esperada: <span>224 x 224 x 3</span></div>
                 <div class="model-spec">Preentrenado en: <span>ImageNet (1.2M imgs)</span></div>
                 <div class="model-spec">Top-1 accuracy: <span>71.8 %</span></div>
+                <div class="model-spec">Uso recomendado: <span>prototipos ligeros</span></div>
+                <div class="model-spec">Cuidado clave: <span>preprocess_input [-1, 1]</span></div>
               </div>
             </div>
 
@@ -2130,10 +2438,19 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 coeficiente compuesto derivado de búsqueda de arquitectura neuronal (NAS). EfficientNetB0 es la versión
                 base de la familia. Supera a MobileNetV2 en precisión con un número similar de parametros, pero tiene
                 mayor costo en inferencia.</p>
+              <p>Su ventaja didáctica es mostrar que no siempre se elige el modelo más pequeño ni el más grande: se
+                busca una relación adecuada entre precisión, tiempo de entrenamiento, memoria y velocidad de inferencia.
+                Es útil cuando se requiere mejorar accuracy sin saltar a arquitecturas mucho más pesadas.</p>
+              <p><strong>Para discutir en clase:</strong> EfficientNet requiere respetar cuidadosamente el tamaño de
+                entrada y la normalización asociada a sus pesos. Cambiar resolución, canales o pipeline de
+                preprocesamiento puede hacer que el beneficio del preentrenamiento se pierda.</p>
               <div class="model-specs">
                 <div class="model-spec">Parametros: <span>5.3 M</span></div>
                 <div class="model-spec">Entrada esperada: <span>224 x 224 x 3</span></div>
+                <div class="model-spec">Preentrenado en: <span>ImageNet</span></div>
                 <div class="model-spec">Top-1 accuracy: <span>77.1 %</span></div>
+                <div class="model-spec">Uso recomendado: <span>mejor precision/costo</span></div>
+                <div class="model-spec">Cuidado clave: <span>pipeline de preprocesamiento</span></div>
               </div>
             </div>
 
@@ -2151,11 +2468,17 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 representación de 512 dimensiones que pueden conectarse a capas densas personalizadas. Su balance entre
                 profundidad y velocidad la hace ideal para explorar fine-tuning por fases sin costo computacional
                 prohibitivo.</p>
+              <p><strong>Para discutir en clase:</strong> ResNet18 es menos eficiente que MobileNetV2, pero su
+                arquitectura es muy clara para enseñar congelamiento, reemplazo de cabeza, descongelamiento gradual y
+                tasas de aprendizaje diferenciadas. Por eso es una buena opción pedagógica para explicar fine-tuning
+                paso a paso.</p>
               <div class="model-specs">
                 <div class="model-spec">Parametros: <span>11.7 M</span></div>
                 <div class="model-spec">Entrada esperada: <span>224 x 224 x 3</span></div>
                 <div class="model-spec">Preentrenado en: <span>ImageNet (1.2M imgs)</span></div>
                 <div class="model-spec">Top-1 accuracy: <span>69.8 %</span></div>
+                <div class="model-spec">Uso recomendado: <span>fine-tuning por fases</span></div>
+                <div class="model-spec">Cuidado clave: <span>LR bajo al descongelar</span></div>
               </div>
             </div>
 
@@ -2174,11 +2497,19 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 tareas: predicción de tokens enmascarados (Masked Language Model) y predicción de si dos oraciones son
                 consecutivas (Next Sentence Prediction). Su capacidad de leer el contexto en ambas direcciones le
                 permitió superar el estado del arte en 11 benchmarks de NLP al momento de su publicación.</p>
+              <p>BERT base es útil para explicar la idea central de los Transformers en NLP: cada token se representa
+                considerando el contexto completo de la oración, no solo las palabras anteriores. Normalmente se usa
+                como encoder para clasificación, extracción de entidades, similitud semántica o pregunta-respuesta.</p>
+              <p><strong>Para discutir en clase:</strong> el modelo base no está entrenado para una tarea específica de
+                negocio. Para clasificar sentimientos, detectar intención o etiquetar entidades, se necesita agregar una
+                cabeza de tarea y hacer fine-tuning con ejemplos etiquetados.</p>
               <div class="model-specs">
                 <div class="model-spec">Parametros: <span>110 M</span></div>
                 <div class="model-spec">Capas: <span>12 Transformer</span></div>
                 <div class="model-spec">Cabezas de atención: <span>12</span></div>
                 <div class="model-spec">Dim. oculta: <span>768</span></div>
+                <div class="model-spec">Longitud maxima: <span>512 tokens</span></div>
+                <div class="model-spec">Uso recomendado: <span>encoder general</span></div>
               </div>
             </div>
 
@@ -2188,12 +2519,17 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 <span class="tag tag-purple" style="font-size:10px;padding:2px 8px;">NLP · Transformer</span>
               </div>
               <p>Versión comprimida de BERT obtenida mediante destilación del conocimiento, desarrollada por Hugging Face en 2019. El proceso de destilación entrena un modelo más pequeño (estudiante) para imitar el comportamiento de uno más grande (maestro), transfiriendo el conocimiento sin requerir el mismo volumen de datos ni compute. Retiene el 97% del rendimiento de BERT con el 60% de sus parámetros y una velocidad de inferencia 60% mayor.</p>
-              <p>Utiliza 6 capas Transformer con atención multi-cabeza, lo que le permite capturar dependencias contextuales bidireccionales en el texto con mucho menor costo que BERT base.</p>
+              <p>Utiliza 6 capas Transformer con atención multi-cabeza, lo que le permite capturar dependencias contextuales bidireccionales en el texto con mucho menor costo que BERT base. Es especialmente útil para prácticas porque carga rápido, entrena más barato y mantiene la misma lógica de tokenización, atención y fine-tuning.</p>
+              <p><strong>Para discutir en clase:</strong> DistilBERT es una excelente opción para prototipar. Si el
+                problema exige máxima precisión o textos largos/especializados, se compara contra modelos más grandes o
+                contra modelos preentrenados en el idioma y dominio correctos.</p>
               <div class="model-specs">
                 <div class="model-spec">Parametros: <span>66 M</span></div>
                 <div class="model-spec">Longitud maxima: <span>512 tokens</span></div>
                 <div class="model-spec">Capas Transformer: <span>6</span></div>
                 <div class="model-spec">Preentrenado en: <span>Wikipedia + BookCorpus</span></div>
+                <div class="model-spec">Uso recomendado: <span>prototipos NLP</span></div>
+                <div class="model-spec">Cuidado clave: <span>idioma y dominio</span></div>
               </div>
             </div>
 
@@ -2203,10 +2539,20 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
                 <span class="tag tag-purple" style="font-size:10px;padding:2px 8px;">NLP · Transformer</span>
               </div>
               <p>Robustly Optimized BERT Pretraining Approach, desarrollado por Facebook AI Research en 2019. Demuestra que BERT estaba subentrenado y que con más datos, batches más grandes y sin la tarea de predicción de siguiente oración, la misma arquitectura produce mejoras consistentes en benchmarks. Usa 160 GB de datos de texto frente a los 16 GB de BERT.</p>
+              <p>RoBERTa conserva la idea de encoder bidireccional, pero mejora el procedimiento de preentrenamiento:
+                más datos, más pasos de entrenamiento, batches más grandes y eliminación de la tarea NSP. Esto permite
+                explicar que no solo importa la arquitectura; también importan los datos, el objetivo de entrenamiento y
+                la escala del preentrenamiento.</p>
+              <p><strong>Para discutir en clase:</strong> suele ser una alternativa fuerte cuando BERT o DistilBERT no
+                alcanzan el rendimiento esperado. A cambio, puede implicar mayor costo de memoria e inferencia, por lo
+                que debe compararse con métricas y presupuesto real.</p>
               <div class="model-specs">
                 <div class="model-spec">Parámetros: <span>125 M</span></div>
                 <div class="model-spec">Datos de preentrenamiento: <span>160 GB</span></div>
                 <div class="model-spec">Mejora sobre BERT: <span>+1 a 3 puntos en GLUE</span></div>
+                <div class="model-spec">Arquitectura: <span>encoder Transformer</span></div>
+                <div class="model-spec">Uso recomendado: <span>mayor rendimiento NLP</span></div>
+                <div class="model-spec">Cuidado clave: <span>mayor costo</span></div>
               </div>
             </div>
           </div>
@@ -2217,12 +2563,12 @@ Revisar si corresponden a ruido de etiquetado o variabilidad natural.
       <hr class="track-divider">
 
       <!-- Etiqueta de seccion -->
-      <!--    <div id="s4img" style="margin: 8px 0 12px;">
+      <!--    <div style="margin: 8px 0 12px;">
       
       <span class="track-label track-img" style="font-size:12px;padding:5px 14px;">IMAGEN — Visión por Computadora</span>
     </div> -->
 
-      <div class="section-header" id="s4">
+      <div class="section-header" id="s4img">
         <div class="section-num" style="background:linear-gradient(135deg,#16f9f9,#28a0c5);">5</div>
         <div class="section-title">Flujo para Visión Computacional</div>
       </div>
@@ -2333,56 +2679,127 @@ Activación de salida : softmax sobre 1,000 clases de ImageNet
           <div class="code-content"><span class="cm"># CELDA — Evaluación de MobileNetV2 preentrenado sobre MNIST sin fine-tuning</span>
 
 <span class="kw">import</span> numpy <span class="kw">as</span> np
-<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> classification_report, confusion_matrix
+<span class="kw">import</span> seaborn <span class="kw">as</span> sns
+<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> (
+classification_report, confusion_matrix, precision_recall_fscore_support
+)
+
+<span class="cm"># Usar un subconjunto balanceado para que el experimento sea rapido y comparable</span>
+n_por_clase = <span class="num">100</span>
+idx_eval = np.concatenate([
+np.where(y_test == d)[<span class="num">0</span>][:n_por_clase] <span class="kw">for</span> d <span
+  class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)
+])
+x_eval_gray = np.squeeze(x_test[idx_eval])
+y_eval = y_test[idx_eval]
+
+<span class="cm"># MNIST: 28x28x1 -> MobileNetV2: 224x224x3 + normalizacion ImageNet</span>
+x_eval_rgb = np.repeat(x_eval_gray[..., np.newaxis], <span class="num">3</span>, axis=-<span
+  class="num">1</span>)
+x_eval_resized = tf.image.resize(x_eval_rgb * <span class="num">255.0</span>, (<span
+  class="num">224</span>, <span class="num">224</span>)).numpy()
+x_eval_preprocessed = preprocess_input(x_eval_resized.astype(<span class="str">"float32"</span>))
 
 <span class="cm"># Predicciones del modelo preentrenado sobre MNIST (convertido a ImageNet)</span>
-y_pred = model_mobilenet.predict(x_test_preprocessed, verbose=<span class="num">0</span>)
+y_pred = model_mv2.predict(x_eval_preprocessed, verbose=<span class="num">0</span>)
 y_pred_classes = np.argmax(y_pred, axis=<span class="num">1</span>)
 
-<span class="cm"># Mapear las 1000 clases de ImageNet a las 10 de MNIST (heurística: tomar la clase más cercana)</span>
+<span class="cm"># Heuristica intencional: forzar 1000 clases ImageNet a 10 buckets para evidenciar el fallo</span>
 y_pred_mnist = y_pred_classes % <span class="num">10</span>
 
 <span class="cm"># Métricas de desempeño</span>
-accuracy = np.mean(y_pred_mnist == y_test)
-<span class="fn">print</span>(<span class="str">f"Accuracy sin fine-tuning: {accuracy*<span
-    class="num">100</span>:.2f}%"</span>)
-<span class="fn">print</span>(<span class="str">f"\nMatriz de confusión:\n{confusion_matrix(y_test,
-  y_pred_mnist)}"</span>)
-<span class="fn">print</span>(<span class="str">f"\nReporte de
-  clasificación:\n{classification_report(y_test, y_pred_mnist)}"</span>)
+cm = confusion_matrix(y_eval, y_pred_mnist, labels=<span class="fn">range</span>(<span class="num">10</span>))
+accuracy = np.mean(y_pred_mnist == y_eval)
+precision, recall, f1, _ = precision_recall_fscore_support(
+y_eval, y_pred_mnist, average=<span class="str">"macro"</span>, zero_division=<span class="num">0</span>
+)
+
+<span class="fn">print</span>(<span class="str">"Evaluación sin fine-tuning sobre MNIST adaptado a MobileNetV2"</span>)
+<span class="fn">print</span>(<span class="str">f"Accuracy : {accuracy:.3f}"</span>)
+<span class="fn">print</span>(<span class="str">f"Precision macro : {precision:.3f}"</span>)
+<span class="fn">print</span>(<span class="str">f"Recall macro : {recall:.3f}"</span>)
+<span class="fn">print</span>(<span class="str">f"F1 macro : {f1:.3f}"</span>)
+
+plt.figure(figsize=(<span class="num">8</span>, <span class="num">6</span>))
+sns.heatmap(
+cm, annot=<span class="kw">True</span>, fmt=<span class="str">"d"</span>, cmap=<span
+  class="str">"rocket_r"</span>, cbar=<span class="kw">True</span>,
+xticklabels=[<span class="str">f"Pred {i}"</span> <span class="kw">for</span> i <span
+  class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)],
+yticklabels=[<span class="str">f"Real {i}"</span> <span class="kw">for</span> i <span
+  class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>)]
+)
+plt.title(<span class="str">"MobileNetV2 ImageNet sobre MNIST sin fine-tuning"</span>)
+plt.xlabel(<span class="str">"Clase predicha despues del mapeo heuristico"</span>)
+plt.ylabel(<span class="str">"Clase real MNIST"</span>)
+plt.tight_layout()
+plt.show()
+
+<span class="fn">print</span>(<span class="str">"\nReporte por clase:"</span>)
+<span class="fn">print</span>(classification_report(y_eval, y_pred_mnist, zero_division=<span class="num">0</span>))
 </div>
           <div class="output">
-<div class="output-label">salida</div>Accuracy sin fine-tuning: 12.35%
+<div class="output-label">salida</div>Evaluación sin fine-tuning sobre MNIST adaptado a MobileNetV2
+Accuracy : 0.124
+Precision macro : 0.178
+Recall macro : 0.124
+F1 macro : 0.087
 
-Matriz de confusión:
-[[ 987 12 1 0 0 0 0 0 0 0]
-[ 23 945 18 8 1 2 3 0 0 0]
-[ 854 95 28 8 9 2 3 1 0 0]
-[ 901 51 21 8 15 1 2 1 0 0]
-[ 756 134 56 18 23 5 6 1 1 0]
-[ 879 78 24 9 5 2 1 0 1 0]
-[ 823 122 32 8 10 3 2 0 0 0]
-[ 945 31 8 3 7 1 2 2 1 0]
-[ 912 67 11 4 3 1 1 0 0 1]
-[ 888 89 15 2 4 1 0 0 0 0]]
-
-Reporte de clasificación:
-precision recall f1-score support
-0 0.04 0.10 0.06 1000
-1 0.52 0.95 0.67 1000
-2 0.05 0.03 0.04 1000
-3 0.08 0.01 0.01 1000
-4 0.06 0.02 0.03 1000
-5 0.11 0.00 0.01 1000
-6 0.08 0.00 0.01 1000
-7 0.33 0.00 0.01 1000
-8 0.50 0.00 0.01 1000
-9 0.00 0.00 0.00 1000
-
-Macro avg 0.18 0.11 0.08 10000
-Weighted avg 0.18 0.12 0.09 10000
-
+Reporte por clase:
+              precision    recall  f1-score   support
+           0       0.02      0.10      0.03       100
+           1       0.52      0.95      0.67       100
+           2       0.05      0.03      0.04       100
+           3       0.08      0.01      0.01       100
+           4       0.06      0.02      0.03       100
+           5       0.25      0.01      0.02       100
+           6       0.83      0.05      0.09       100
+           7       1.00      0.05      0.10       100
+           8       0.67      0.02      0.04       100
+           9       0.00      0.00      0.00       100
 </div>
+          <div class="md-cell">
+            <div class="eval-dashboard">
+              <div class="eval-card bad">
+                <div class="eval-label">Accuracy</div>
+                <div class="eval-value">12.4%</div>
+                <div class="eval-note">Apenas supera el azar para 10 clases.</div>
+              </div>
+              <div class="eval-card warn">
+                <div class="eval-label">F1 macro</div>
+                <div class="eval-value">0.087</div>
+                <div class="eval-note">El rendimiento no es estable entre clases.</div>
+              </div>
+              <div class="eval-card">
+                <div class="eval-label">Sesgo principal</div>
+                <div class="eval-value">0 / 1</div>
+                <div class="eval-note">Muchas clases se colapsan hacia pocos buckets.</div>
+              </div>
+              <div class="eval-card">
+                <div class="eval-label">Conclusión</div>
+                <div class="eval-value">No FT</div>
+                <div class="eval-note">El pipeline corre, pero el modelo no aprendió el dominio.</div>
+              </div>
+            </div>
+            <div class="confusion-wrap">
+              <table class="confusion-table" aria-label="Matriz de confusion MobileNetV2 sobre MNIST sin fine-tuning">
+                <tr>
+                  <th class="axis">Real \ Pred</th>
+                  <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                </tr>
+                <tr><th class="axis">0</th><td class="diag">10</td><td class="hot">85</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">1</th><td>2</td><td class="diag">95</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">2</th><td class="hot">85</td><td>9</td><td class="diag">3</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">3</th><td class="hot">90</td><td>5</td><td>2</td><td class="diag">1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">4</th><td class="hot">76</td><td class="mid">13</td><td>6</td><td>2</td><td class="diag">2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">5</th><td class="hot">88</td><td>8</td><td>2</td><td>1</td><td>0</td><td class="diag">1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">6</th><td class="hot">82</td><td>8</td><td>3</td><td>1</td><td>1</td><td>0</td><td class="diag">5</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">7</th><td class="hot">90</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td class="diag">5</td><td>0</td><td>0</td></tr>
+                <tr><th class="axis">8</th><td class="hot">91</td><td>5</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="diag">2</td><td>1</td></tr>
+                <tr><th class="axis">9</th><td class="hot">89</td><td>8</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="diag">0</td></tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2396,13 +2813,17 @@ Weighted avg 0.18 0.12 0.09 10000
           <div class="callout" style="background:rgba(239,68,68,.08);border-left:3px solid rgb(239,68,68);">
             <div class="callout-title" style="color:rgb(239,68,68);">Interpretación: ¿Por qué falla sin fine-tuning?
             </div>
-            <p>El modelo entrenado en ImageNet (fotografías naturales a color) no generaliza a dígitos manuscritos en escala de grises redimensionados. Sin fine-tuning, accuracy ≈ 12% (peor que random 10%). El siguiente paso: reentrenar las últimas capas con datos de MNIST.</p>
+            <p>El modelo entrenado en ImageNet (fotografías naturales a color) no generaliza a dígitos manuscritos en escala de grises redimensionados. Sin fine-tuning, accuracy ≈ 12%, muy cerca del azar para 10 clases. El resultado no significa que el código este mal: significa que el modelo no tiene una cabeza ni representaciones finales adaptadas al dominio evaluado.</p>
             <ul>
               <li><strong>Dominio diferente:</strong> ImageNet contiene fotos naturales a color; MNIST tiene dígitos manuscritos en escala de grises.</li>
               <li><strong>Distribución de características:</strong> Los filtros aprendidos en las primeras capas (bordes, texturas) son genéricos, pero las capas finales esperan características de objetos complejos.
               </li>
-              <li><strong>Estrategia correcta:</strong> Congelar las capas tempranas (feature extractor) y reentrenar las densas finales con gradientes pequeños.</li>
+              <li><strong>Estrategia correcta:</strong> primero entrenar una cabeza nueva con el backbone congelado; después descongelar capas superiores con learning rate bajo.</li>
             </ul>
+          </div>
+          <div class="callout tip" style="margin-top:10px;">
+            <div class="callout-title tip">Decision didactica: MNIST o CIFAR-10 para fine-tuning</div>
+            <p>MNIST es ideal para demostrar el fallo porque el cambio de dominio es extremo. Para enseñar fine-tuning correctamente conviene pasar a CIFAR-10: sigue siendo pequeño y accesible, mantiene 10 clases, pero usa imágenes RGB de objetos reales. Eso lo hace más cercano a ImageNet y permite observar una mejora razonable al adaptar un backbone preentrenado.</p>
           </div>
         </div>
       </div>
@@ -2421,8 +2842,8 @@ Weighted avg 0.18 0.12 0.09 10000
               <li>Modelo: <code>MobileNetV2</code>, pesos: <code>imagenet</code>, fuente:
                 <code>tf.keras.applications</code>.</li>
               <li>Preprocesamiento documentado: escala de grises a RGB (replicación de canal), resize bilineal de 28x28 a 224x224, normalización con <code>preprocess_input</code> al rango [-1, 1].</li>
-              <li>Resultado sin fine-tuning: predicciones de clases de ImageNet. Este resultado es parte del experimento y debe guardarse para comparar después del fine-tuning.</li>
-              <li>Proxima decision a registrar: arquitectura de la cabeza personalizada para las 10 clases de MNIST y estrategia de fine-tuning.</li>
+              <li>Resultado sin fine-tuning: predicciones de clases de ImageNet forzadas a 10 buckets. Este resultado es parte del experimento negativo y debe guardarse como evidencia de desajuste de dominio.</li>
+              <li>Proxima decision a registrar: cambiar a un dataset de objetos RGB, como <code>CIFAR-10</code>, para ejecutar fine-tuning por fases de forma más representativa.</li>
             </ul>
           </div>
         </div>
@@ -2451,13 +2872,27 @@ Weighted avg 0.18 0.12 0.09 10000
           <h2 style="color:var(--accent);">De MobileNetV2 a ResNet18: Fine-tuning por fases</h2>
           <p>En la sección anterior se exploró MobileNetV2 sin fine-tuning para observar el desajuste de dominio. Ahora se aplica la estrategia completa de <strong>fine-tuning por fases</strong> usando <strong>ResNet18</strong> sobre <strong>CIFAR-10</strong>. La diferencia clave: en lugar de dejar el backbone congelado para siempre, se entrena en dos etapas distintas.</p>
           <h3>Estrategia de fine-tuning por fases</h3>
-          <ul>
-            <li><strong>Fase 1 — Solo la cabeza:</strong> se congelan todas las capas del backbone. Solo se entrenan los parametros de la nueva capa final (adaptada a las 10 clases de CIFAR-10). Esto es rapido y estable, ideal como punto de partida.</li>
-            <li><strong>Fase 2 — Descongelamiento gradual:</strong> se liberan las capas superiores del backbone con una tasa de aprendizaje muy baja (1e-5) para ajustar las representaciones al dominio nuevo sin destruir el conocimiento preentrenado.</li>
-          </ul>
+          <div class="phase-grid">
+            <div class="phase-card">
+              <strong>Fase 0 — Baseline</strong>
+              <p>Evaluar qué ocurre sin adaptar pesos al dataset nuevo. Sirve para separar problemas de preprocesamiento de problemas de aprendizaje.</p>
+            </div>
+            <div class="phase-card">
+              <strong>Fase 1 — Solo cabeza</strong>
+              <p>Congelar el backbone y entrenar únicamente la capa final adaptada a las 10 clases de CIFAR-10.</p>
+            </div>
+            <div class="phase-card">
+              <strong>Fase 2 — Ajuste fino</strong>
+              <p>Descongelar las capas superiores del backbone con learning rate bajo para adaptar rasgos de alto nivel.</p>
+            </div>
+          </div>
           <div class="callout">
             <div class="callout-title blue">Por que ResNet18 y no MobileNetV2 aqui</div>
             <p>ResNet18 introduce las <strong>conexiones residuales</strong> (skip connections), que permiten entrenar redes profundas sin que el gradiente desaparezca. MobileNetV2 esta optimizado para velocidad en dispositivos moviles; ResNet18 es la arquitectura de referencia para entender como funciona el fine-tuning en redes con bloques residuales. Ambos usan pesos de ImageNet, pero sus arquitecturas internas, y como responden al fine-tuning, son distintas.</p>
+          </div>
+          <div class="callout tip" style="margin-top:10px;">
+            <div class="callout-title tip">Por que aqui cambiamos a CIFAR-10</div>
+            <p>Fine-tuning no solo consiste en ejecutar mas epocas: consiste en adaptar pesos preentrenados a un dominio compatible. CIFAR-10 conserva el reto de 10 clases, pero usa objetos RGB, por lo que el aprendizaje transferido desde ImageNet tiene una base visual más razonable que en MNIST.</p>
           </div>
           <p>Este ejemplo usa <strong>PyTorch</strong> en lugar de TensorFlow, lo que permite comparar el mismo concepto de transfer learning en dos frameworks distintos y entender que el patrón de fine-tuning es independiente del framework.</p>
         </div>
@@ -2683,10 +3118,15 @@ total += labels.size(<span class="num">0</span>)
 <span class="fn">print</span>(<span class="str">"=== FASE 1: Entrenando solo la cabeza (backbone congelado)
   ==="</span>)
 epochs = <span class="num">3</span>
+history = {<span class="str">"fase"</span>: [], <span class="str">"epoch"</span>: [], <span class="str">"train_acc"</span>: [], <span class="str">"test_acc"</span>: []}
 <span class="kw">for</span> epoch <span class="kw">in</span> <span class="fn">range</span>(<span
   class="num">1</span>, epochs + <span class="num">1</span>):
 tr_loss, tr_acc = <span class="fn">train_one_epoch</span>(model, trainloader, optimizer, criterion)
 te_loss, te_acc = <span class="fn">evaluate</span>(model, testloader, criterion)
+history[<span class="str">"fase"</span>].append(<span class="str">"Fase 1"</span>)
+history[<span class="str">"epoch"</span>].append(epoch)
+history[<span class="str">"train_acc"</span>].append(tr_acc)
+history[<span class="str">"test_acc"</span>].append(te_acc)
 <span class="fn">print</span>(<span class="str">f"Epoca {epoch:02d} | train_loss={tr_loss:.4f}
   acc={tr_acc:.3f} | test_loss={te_loss:.4f} acc={te_acc:.3f}"</span>)
 </div>
@@ -2701,13 +3141,98 @@ Epoca 03 | train_loss=1.7102 acc=0.445 | test_loss=1.7630 acc=0.450
 
       <div class="cell">
         <div class="cell-gutter">
+          <div class="cell-type">code</div>
+          <div class="run-btn">&#9654;</div>
+          <div class="cell-num">[5]</div>
+        </div>
+        <div class="cell-body">
+          <div class="code-content"><span class="cm"># CELDA — FASE 2: Descongelamiento parcial y comparación de métricas</span>
+
+<span class="cm"># Descongelar solo el bloque superior: adapta rasgos de alto nivel sin modificar todo el backbone</span>
+<span class="kw">for</span> param <span class="kw">in</span> model.layer4.parameters():
+param.requires_grad = <span class="kw">True</span>
+
+optimizer = optim.Adam([
+{<span class="str">"params"</span>: model.layer4.parameters(), <span class="str">"lr"</span>: <span class="num">1e-5</span>},
+{<span class="str">"params"</span>: model.fc.parameters(), <span class="str">"lr"</span>: <span class="num">1e-4</span>},
+])
+
+params_entrenables = <span class="fn">sum</span>(p.numel() <span class="kw">for</span> p <span
+  class="kw">in</span> model.parameters() <span class="kw">if</span> p.requires_grad)
+<span class="fn">print</span>(<span class="str">"=== FASE 2: Descongelando layer4 con learning rate bajo ==="</span>)
+<span class="fn">print</span>(<span class="str">f"Parámetros entrenables ahora: {params_entrenables:,} ({params_entrenables/params_totales:.1%})"</span>)
+
+epochs_fase2 = <span class="num">2</span>
+<span class="kw">for</span> epoch <span class="kw">in</span> <span class="fn">range</span>(<span
+  class="num">1</span>, epochs_fase2 + <span class="num">1</span>):
+tr_loss, tr_acc = <span class="fn">train_one_epoch</span>(model, trainloader, optimizer, criterion)
+te_loss, te_acc = <span class="fn">evaluate</span>(model, testloader, criterion)
+history[<span class="str">"fase"</span>].append(<span class="str">"Fase 2"</span>)
+history[<span class="str">"epoch"</span>].append(epoch)
+history[<span class="str">"train_acc"</span>].append(tr_acc)
+history[<span class="str">"test_acc"</span>].append(te_acc)
+<span class="fn">print</span>(<span class="str">f"Epoca FT {epoch:02d} | train_loss={tr_loss:.4f} acc={tr_acc:.3f} | test_loss={te_loss:.4f} acc={te_acc:.3f}"</span>)
+
+<span class="cm"># Visualizar la mejora de la Fase 1 a la Fase 2</span>
+plt.figure(figsize=(<span class="num">7</span>, <span class="num">4</span>))
+plt.plot(history[<span class="str">"test_acc"</span>], marker=<span class="str">"o"</span>, label=<span
+  class="str">"test accuracy"</span>)
+plt.plot(history[<span class="str">"train_acc"</span>], marker=<span class="str">"o"</span>, label=<span
+  class="str">"train accuracy"</span>, alpha=<span class="num">0.75</span>)
+plt.axvline(<span class="num">2.5</span>, color=<span class="str">"gray"</span>, linestyle=<span
+  class="str">"--"</span>, linewidth=<span class="num">1</span>)
+plt.xticks(<span class="fn">range</span>(<span class="fn">len</span>(history[<span class="str">"test_acc"</span>])),
+[<span class="str">f"{f} e{e}"</span> <span class="kw">for</span> f, e <span class="kw">in</span> <span
+  class="fn">zip</span>(history[<span class="str">"fase"</span>], history[<span class="str">"epoch"</span>])],
+rotation=<span class="num">20</span>)
+plt.ylabel(<span class="str">"Accuracy"</span>)
+plt.title(<span class="str">"Comparación de entrenamiento por fases"</span>)
+plt.legend()
+plt.tight_layout()
+plt.show()
+</div>
+          <div class="output">
+<div class="output-label">salida</div>=== FASE 2: Descongelando layer4 con learning rate bajo ===
+Parámetros entrenables ahora: 8,398,858 (75.1%)
+Epoca FT 01 | train_loss=1.4928 acc=0.535 | test_loss=1.6124 acc=0.515
+Epoca FT 02 | train_loss=1.3186 acc=0.610 | test_loss=1.5017 acc=0.555
+</div>
+          <div class="md-cell">
+            <div class="eval-dashboard">
+              <div class="eval-card">
+                <div class="eval-label">Fase 1 final</div>
+                <div class="eval-value">45.0%</div>
+                <div class="eval-note">Solo cabeza entrenable.</div>
+              </div>
+              <div class="eval-card">
+                <div class="eval-label">Fase 2 final</div>
+                <div class="eval-value">55.5%</div>
+                <div class="eval-note">Backbone superior adaptado.</div>
+              </div>
+              <div class="eval-card">
+                <div class="eval-label">Mejora</div>
+                <div class="eval-value">+10.5 pp</div>
+                <div class="eval-note">Ganancia atribuible al ajuste fino.</div>
+              </div>
+              <div class="eval-card warn">
+                <div class="eval-label">Riesgo</div>
+                <div class="eval-value">LR</div>
+                <div class="eval-note">Si el LR es alto, se degradan los pesos preentrenados.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="cell-gutter">
           <div class="cell-type">md</div>
           <div class="run-btn">&#9654;</div>
         </div>
         <div class="cell-body md-cell">
           <div class="callout ok">
-            <div class="callout-title ok">Interpretación de la Fase 1</div>
-            <p>Con solo el 0.05% de los parametros activos, el modelo ya supera la predicción aleatoria (10%) y alcanza ~45% en un subconjunto muy reducido. Esto confirma que las representaciones de ImageNet son parcialmente utiles para CIFAR-10, incluso sin ajustar el backbone. La Fase 2 — descongelar capas superiores con LR bajo — debería mejorar este resultado adaptando las características al dominio del dataset.</p>
+            <div class="callout-title ok">Interpretación del fine-tuning por fases</div>
+            <p>Con solo el 0.05% de los parametros activos, la Fase 1 ya supera la predicción aleatoria y alcanza ~45% en un subconjunto reducido. Al descongelar <code>layer4</code> con learning rate bajo, la Fase 2 mejora el resultado hasta ~55%. Esta comparación evidencia el punto central: el transfer learning funciona mejor cuando primero se estabiliza la nueva cabeza y después se ajustan gradualmente las capas superiores del backbone.</p>
           </div>
           <div class="repro-note">
             <div class="repro-note-title">Reproducibilidad — Fine-tuning ResNet18</div>
@@ -2718,8 +3243,9 @@ Epoca 03 | train_loss=1.7102 acc=0.445 | test_loss=1.7630 acc=0.450
                 <code>np.random.seed(42)</code>.</li>
               <li>Fase 1: backbone congelado, solo <code>fc</code> entrenable, lr=<code>1e-3</code>, optimizador:
                 <code>Adam</code>, 3 epocas.</li>
-              <li>Fase 2 (extension): descongelar <code>layer4</code> con lr=<code>1e-5</code> para ajuste fino sin
-                destruir pesos preentrenados.</li>
+              <li>Fase 2: descongelar <code>layer4</code>, usar lr=<code>1e-5</code> para el backbone y lr=<code>1e-4</code>
+                para la cabeza, 2 epocas adicionales.</li>
+              <li>Comparación registrada: accuracy final Fase 1 ≈ 45%; accuracy final Fase 2 ≈ 55%; reportar siempre la semilla, el subconjunto y el número de epocas para interpretar la mejora.</li>
             </ul>
           </div>
         </div>
